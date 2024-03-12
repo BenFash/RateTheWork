@@ -14,6 +14,7 @@
     --border: 1px solid #00000030;
 }
 
+/* Generic */
 
 html,
 body {
@@ -24,6 +25,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    color: var(--font-color);
 }
 
 h1,
@@ -44,7 +46,7 @@ main {
 
 /* Header  */
 .navbar {
-    background-color: var(--navfooter) !important;
+    background-color: var(--navfooter);
     box-shadow: var(--smal-box-shadow);
 }
 
@@ -54,7 +56,6 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-    color: var(--body);
     transform: scale(1.1);
 }
 
@@ -68,6 +69,19 @@ img.logo {
     height: 5rem;
     border-radius: 50%;
 }
+
+/* index.html */
+
+.home-bio {
+    margin-top: 4rem;
+    box-shadow: var(--smal-box-shadow);
+    background-color: #FEFCFB;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+
+
 
 /* Footer */
 footer {

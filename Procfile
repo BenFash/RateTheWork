@@ -1,1 +1,1 @@
-gunicorn rate_the_work.wsgi
+web: gunicorn rate_the_work.wsgi

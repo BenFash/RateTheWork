@@ -31,7 +31,7 @@ I am looking for a clean and simple design ensuring all essential functions are 
 
 <details><summary>Colour Scheme</summary>
 
-- `#FEFCFB`: a white color used for the body of website.
+- `#D7CDCC`: a off-white color used for the body of website. 
 
 - `#034078`: a indigo-blue color used for the nav, footer.
 
@@ -39,7 +39,7 @@ I am looking for a clean and simple design ensuring all essential functions are 
 
 - `#1282A2`: A lighter blue used for buttons.
 
-- `#D7CDCC`: a off-grey used for.
+- `#FEFCFB`: a off-grey used for icons.
 
 
 
@@ -164,14 +164,21 @@ You can break the credits section up into Content and Media, depending on what y
 
 ### Content 
 
-- The text for the Home page was taken from Wikipedia Article A
-- Instructions on how to implement form validation on the Sign Up page was taken from [Specific YouTube Tutorial](https://www.youtube.com/)
+- The text for the Home page, about us was taken from [ChatGPT](https://chat.openai.com/)
+- Instructions on how to implement search feature [Specific YouTube Tutorial]
+- Instructions on how to implement profile [Specific YouTube Tutorial]
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/)
 
 ### Media
 
+- The site logo was created by myself using [Canva](https://www.canva.com/)
 - The photos used on the home and sign up page are from This Open Source site
 - The images used for the gallery page were taken from this other open source site
+
+### Typography 
+
+- Colour pallet from [Fontpair](https://fontpair.com/)
+- Fonts used from [Google Fonts](https://fonts.google.com/)
 
 
 Congratulations on completing your Readme, you have made another big stride in the direction of being a developer! 

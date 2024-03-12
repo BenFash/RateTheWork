@@ -1,0 +1,86 @@
+:root {
+    /* fonts */
+    --title: Oswald, serif;
+    --main-font: Source Sans Pro, sans-serif;
+
+    /* colors */
+    --body: #D7CDCC;
+    --navfooter: #034078;
+    --font-color: #001F54;
+    --buttons: #1282A2;
+
+    /* Utils */
+    --smal-box-shadow: 1px -1px 7px 0 #00000061;
+    --border: 1px solid #00000030;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--main-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title);
+}
+
+main {
+    flex: 1 0 auto;
+    background-color: var(--body);
+}
+
+
+
+/* Header  */
+.navbar {
+    background-color: var(--navfooter) !important;
+    box-shadow: var(--smal-box-shadow);
+}
+
+a.nav-link {
+    color: var(--body);
+}
+
+.active {
+    font-weight: 700;
+
+}
+
+img.logo {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    flex-shrink: 0;
+    background-color: var(--navfooter);
+    color: var(--body);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-top: var(--border);
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--body);
+}
+
+.social-icons {
+    font-size: 1.5rem;
+    margin: .5rem .5rem;
+}

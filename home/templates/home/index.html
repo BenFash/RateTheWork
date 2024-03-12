@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<section class="container text-center">
+    <h1 class="mt-3">Rate The Work</h1>
+    <form class="d-flex mt-5" role="search" method="GET" action="#">
+        <input class="form-control me-2" name="Q" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+    </form>
+    <div class="home-bio">
+        Welcome to "Rate the Work," a platform where individuals and companies alike can showcase their projects and
+        receive valuable feedback. Whether you're a company looking to display your portfolio or an individual seeking a
+        second opinion on works completed for you, the Rate the Work community is here to assist you.
+        <br>
+        Our platform aims to create a collaborative environment where users can share their experiences, insights, and
+        expertise to help one another grow and improve. By providing a space for constructive criticism and constructive
+        feedback, we empower users to refine their craft and make informed decisions about their projects.
+        <br>
+        At Rate the Work, we believe in the power of community-driven feedback to drive innovation and excellence. Join
+        us on this journey as we work together to elevate the quality of workmanship and creativity across all
+        industries.
+    </div>
+</section>
+{% endblock %}

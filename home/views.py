@@ -4,5 +4,5 @@ from django.contrib import messages
 from django.http import HttpResponse
 
 # Create your views here.
-# def testview(request):
-#     return render(request, 'blog/posts.html')
+def Index(request):
+    return render(request, 'home/index.html')

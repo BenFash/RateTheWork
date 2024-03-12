@@ -50,6 +50,12 @@ main {
 
 a.nav-link {
     color: var(--body);
+    transition: all 0.3s ease;
+}
+
+a.nav-link:hover {
+    color: var(--body);
+    transform: scale(1.1);
 }
 
 .active {
@@ -82,4 +88,9 @@ footer a {
 .social-icons {
     font-size: 1.5rem;
     margin: .5rem .5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons:hover {
+    transform: scale(1.1);
 }

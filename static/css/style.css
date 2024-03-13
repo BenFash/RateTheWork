@@ -42,6 +42,9 @@ main {
     background-color: var(--body);
 }
 
+.active {
+    font-weight: 700;
+}
 
 
 /* Header  */
@@ -57,11 +60,6 @@ a.nav-link {
 
 a.nav-link:hover {
     transform: scale(1.1);
-}
-
-.active {
-    font-weight: 700;
-
 }
 
 img.logo {
@@ -96,9 +94,6 @@ footer {
     border-top: var(--border);
 }
 
-footer a {
-    color: var(--body);
-}
 
 .social-icons {
     font-size: 1.5rem;
@@ -108,4 +103,13 @@ footer a {
 
 .social-icons:hover {
     transform: scale(1.1);
+}
+
+a.footer-links {
+    text-decoration: none;
+    color: var(--body);
+}
+
+a.footer-links:hover {
+    color: black;
 }

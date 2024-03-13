@@ -20,7 +20,7 @@
                         </p>
                         {% endfor %}
                     </div>
-                    <p><strong>Likes:</strong> {{ w.likes.all.count }}</p>
+                    <p><strong>Likes:</strong> {{ w.likes.all.count }} <i class="fa-regular fa-thumbs-up"></i></p>
                     <p class="card-text"><strong>Description:</strong> {{ w.content|truncatechars:100 }}</p>
                 </div>
             </div>

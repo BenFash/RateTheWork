@@ -7,7 +7,7 @@ from .models import Work, Profile, Category
 
 #Create your views here.
 def work_list(request):
-    queryset = Work.objects.all().order_by("-created_on")
+    queryset = Work.objects.filter(approved=True).order_by("-created_on")
 
     context = {
         'work': queryset,

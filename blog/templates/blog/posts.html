@@ -14,6 +14,7 @@
                 <img src="{{ w.work_image.url }}" class="card-img-top" alt="{{ w.title }}">
                 <div class="card-body">
                     <h2 class="card-title">{{ w.title }}</h2>
+                    <span>{{ w.likes }}</span>
                     <p class="card-text">{{ w.content|truncatechars:100 }}</p>
                 </div>
             </div>

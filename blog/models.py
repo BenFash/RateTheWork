@@ -27,7 +27,7 @@ class Category(models.Model):
     name = models.CharField(max_length=50, choices=CATEGORY, default="construction")
 
     def __str__(self):
-        return self.category
+        return self.name
 
 class Work(models.Model):
     """
@@ -58,7 +58,7 @@ class Rating(models.Model):
     model for work ratings/comments
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="ratings")
-    work = models.ManyToManyField(Work, related_name="work_ratings")
+    work = models.ForeignKey(Work, on_delete=models.CASCADE, related_name="work_ratings", default=1)
     content = models.TextField()
     suggested_price = models.IntegerField(blank=True, null=True)
     approved = models.BooleanField(default=False)

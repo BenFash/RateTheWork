@@ -2,12 +2,15 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
 from django.contrib import messages
 from django.http import HttpResponse
+from django.db.models import Q
+from .models import Work, Profile, Category
 
-# Create your views here.
+#Create your views here.
 def work_list(request):
-    queryset = Work.objects.filter(status=1).order_by("-created_on")
+    queryset = Work.objects.all().order_by("-created_on")
+
     context = {
-        'object_list': queryset,
+        'work': queryset,
         'paginate_by': 4,
     }
-    return render(request, 'posts.html', context)
+    return render(request, 'blog/posts.html', context)

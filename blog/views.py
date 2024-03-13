@@ -14,3 +14,4 @@ def work_list(request):
         'paginate_by': 4,
     }
     return render(request, 'blog/posts.html', context)
+

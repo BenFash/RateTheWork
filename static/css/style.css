@@ -70,7 +70,7 @@ img.logo {
 
 /* index.html */
 
-.home-bio {
+.home-info {
     margin-top: 3rem;
     margin-bottom: 3rem;
     box-shadow: var(--smal-box-shadow);
@@ -79,10 +79,11 @@ img.logo {
     border-radius: 10px;
 }
 
-.home-bio-title {
+.home-info-title {
     font-family: var(--title);
 }
 
+/* work_detail.html */
 
 
 

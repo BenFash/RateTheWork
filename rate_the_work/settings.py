@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR,'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['.herokuapp.com', 'localhost', '127.0.0.1','8000-benfash-ratethework-prmaj95y6lk.ws-eu108.gitpod.io',]
 
@@ -44,7 +44,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary_storage',
     'cloudinary',
-    # 'crispy_forms',
+    'crispy_bootstrap5',
+    'crispy_forms',
     # 'allauth',
     # 'allauth.account',
     # 'allauth.socialaccount',
@@ -52,6 +53,9 @@ INSTALLED_APPS = [
     'blog',
     'home',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

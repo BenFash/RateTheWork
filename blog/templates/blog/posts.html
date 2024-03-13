@@ -9,7 +9,7 @@
     <a href="#" class="btn btn-primary ">Create Post</a>
     <div class="container d-flex flex-row flex-wrap justify-content-center">
         {% for w in work %}
-        <a href="#" class="work" aria-label="Click to view {{ w.title }}">
+        <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
             <div class="card m-3" style="width: 18rem;">
                 <img src="{{ w.work_image.url }}" class="card-img-top" alt="{{ w.title }}">
                 <div class="card-body">

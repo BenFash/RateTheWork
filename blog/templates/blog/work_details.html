@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Work Detail - {{ work.title }}{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4 mt-3">
+                <img src="{{ work.work_image.url }}" alt="{{ work.title }}" class="card-img-top">
+                <div class="card-body">
+                    <h1 class="card-title">{{ work.title }}</h1>
+                    <p class="card-text">Posted by {{ work.user }} on {{ work.created_on }}</p>
+                    <hr>
+                    {% if request.user == work.user %}
+                    <div class="text-center">
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-danger">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mb-4 mt-3">
+                <div class="card-body">
+                    <h2 class="card-title">Description</h2>
+                    <p class="card-text">{{ work.content }}</p>
+                </div>
+            </div>
+            <div class="card mb-4 mt-3">
+                <div class="card-body">
+                    {% for category in work.categories.all %}
+                    <h2 class="card-title">Category</h2>
+                    <p class="card-text">{{ category.name }}</p>
+                    {% endfor %}
+                    <h2 class="card-title">Sub-Category</h2>
+                    <p class="card-text">{{ work.sub_category }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card mb-4 mt-3">
+                <h3 class="card-header">Comments</h3>
+                <div class="card-body">
+                    {% for rating in ratings %}
+                    <div class="rating" style="padding: 10px;">
+                        <p class="font-weight-bold">{{ rating.user }}</p>
+                        <p class="text-muted">{{ rating.created_on }}</p>
+                        <p>{{ rating.content | linebreaks }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 mt-3">
+                <div class="card-body">
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your rating is awaiting approval
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3 class="card-title">Leave A Comment</h3>
+                    <p class="card-text">Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {% csrf_token %}
+                        {{ rating_form | crispy }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

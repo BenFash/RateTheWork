@@ -4,5 +4,10 @@ from django.contrib import messages
 from django.http import HttpResponse
 
 # Create your views here.
-# def testview(request):
-#     return render(request, 'blog/posts.html')
+def work_list(request):
+    queryset = Work.objects.filter(status=1).order_by("-created_on")
+    context = {
+        'object_list': queryset,
+        'paginate_by': 4,
+    }
+    return render(request, 'posts.html', context)

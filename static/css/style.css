@@ -79,6 +79,10 @@ img.logo {
     border-radius: 10px;
 }
 
+.home-bio-title {
+    font-family: var(--title);
+}
+
 
 
 

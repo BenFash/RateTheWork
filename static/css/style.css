@@ -85,6 +85,14 @@ img.logo {
 
 /* work_detail.html */
 
+.rating {
+    padding: 10px;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
 
 
 /* Footer */

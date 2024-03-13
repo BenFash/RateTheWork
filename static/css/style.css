@@ -73,9 +73,10 @@ img.logo {
 /* index.html */
 
 .home-bio {
-    margin-top: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     box-shadow: var(--smal-box-shadow);
-    background-color: #FEFCFB;
+    background-color: white;
     padding: 1.5rem;
     border-radius: 10px;
 }

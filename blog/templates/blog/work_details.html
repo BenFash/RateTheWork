@@ -52,7 +52,8 @@
                 <h3 class="card-header">Comments</h3>
                 <div class="card-body">
                     {% for rating in ratings %}
-                    <div class="{% if not rating.approved and rating.user == user %}d-none{% endif %}">
+                    {% if rating.work == work %}
+                    <div class="{% if not rating.approved %}d-none{% endif %}">
                         <p class="font-weight-bold">{{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
                         <p>{{ rating.content | linebreaks }}</p>
@@ -63,6 +64,7 @@
                         </div>
                         {% endif %}
                     </div>
+                    {% endif %}
                     {% endfor %}
                 </div>
             </div>

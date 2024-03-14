@@ -11,3 +11,4 @@ class WorkForm(forms.ModelForm):
     class Meta:
         model = Work
         fields = ('title', 'work_image', 'categories', 'sub_category', 'content')
+

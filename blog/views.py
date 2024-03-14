@@ -38,6 +38,7 @@ def work_detail(request, pk):
             rating.work = work
             rating.user = request.user
             rating.save()
+            rating_form = RatingForm()
             return render(request, "blog/work_details.html", {
                 "work": work,
                 "ratings": ratings,
@@ -66,3 +67,26 @@ def work_like(request, pk):
         post.likes.add(request.user)
 
     return HttpResponseRedirect(reverse('work_detail', args=[slug]))
+
+
+def comment_edit(request, slug, rating_id):
+    """
+    View to edit comments
+    """
+    if request.method == "POST":
+        queryset = Work.objects.filter(approved=True)
+        work = get_object_or_404(queryset, pk=pk)
+
+        rating = get_object_or_404(Rating, pk=rating_id)
+        rating_form = RatingForm(data=request.POST, instance=rating)
+
+        if rating_form.is_valid() and rating.user == request.user:
+            rating = rating_form.save(commit=False)
+            rating.work = work
+            rating.approved = False
+            rating.save()
+            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating comment!')
+
+    return HttpResponseRedirect(reverse('work_detail', args=[pk]))

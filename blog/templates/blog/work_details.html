@@ -44,46 +44,50 @@
 
         </div>
     </div>
-    <!-- comment area -->
+    <!-- Comment area and Leave comment area -->
     <div class="row">
+        <!-- Comment area -->
         <div class="col-md-8">
             <div class="card mb-4 mt-3">
                 <h3 class="card-header">Comments</h3>
                 <div class="card-body">
                     {% for rating in ratings %}
-                    <div class="rating {% if not rating.approved and rating.user == user %}
-                    faded{% elif not rating.approved %}d-none{% endif %}">
+                    <div
+                        class="{% if not rating.approved and rating.user == user %}faded{% elif not rating.approved %}d-none{% endif %}">
                         <p class="font-weight-bold">{{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
                         <p>{{ rating.content | linebreaks }}</p>
+                        {% if user.is_authenticated and rating.user == user %}
+                        <button class="btn btn-primary" data-rating_id="{{ rating.id }}">Edit</button>
+                        <button class="btn btn-danger" data-rating_id="{{ rating.id }}">Delete</button>
+                        {% endif %}
                     </div>
                     {% endfor %}
                 </div>
             </div>
         </div>
-    </div>
-    <!-- leave comment area -->
-    <div class="col-md-4">
-        <div class="card mb-4 mt-3">
-            <div class="card-body">
-                {% if commented %}
-                <div class="alert alert-success" role="alert">
-                    Your rating is awaiting approval
+        <!-- Leave comment area -->
+        <div class="col-md-4">
+            <div class="card mb-4 mt-3">
+                <div class="card-body">
+                    {% if commented %}
+                    <div class="alert alert-success" role="alert">
+                        Your comment is awaiting approval
+                    </div>
+                    {% else %}
+                    {% if user.is_authenticated %}
+                    <h3 class="card-title">Leave A Comment</h3>
+                    <p class="card-text">Posting as: {{ user.username }}</p>
+                    <form method="post" style="margin-top: 1.3em;">
+                        {% csrf_token %}
+                        {{ rating_form | crispy }}
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    {% endif %}
+                    {% endif %}
                 </div>
-                {% else %}
-                {% if user.is_authenticated %}
-                <h3 class="card-title">Leave A Comment</h3>
-                <p class="card-text">Posting as: {{ user.username }}</p>
-                <form method="post" style="margin-top: 1.3em;">
-                    {% csrf_token %}
-                    {{ rating_form | crispy }}
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-                {% endif %}
-                {% endif %}
             </div>
         </div>
     </div>
-</div>
-</div>
-{% endblock %}
+
+    {% endblock %}

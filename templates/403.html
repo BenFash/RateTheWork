@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}403 Error{% endblock %}
+
+{% block content %}
+<div class="container text-center ">
+    <h1>403</h1>
+    <h2>Forbidden</h2>
+    <p>Naughty, naughty. You don't have permission to access this page.</p>
+    <a href="{% url 'home' %}" class="btn btn-primary w-25 ">Get out of here!</a>
+</div>
+{% endblock %}

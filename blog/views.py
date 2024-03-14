@@ -1,13 +1,14 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views import generic
+from django.views.generic import DeleteView
+from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 from .models import Work, Rating
 from .forms import RatingForm
 
 #Create your views here.
-def work_list(request):
+def WorkList(request):
     """
     view for the post page
     """
@@ -20,7 +21,7 @@ def work_list(request):
     return render(request, 'blog/posts.html', context)
 
 
-def work_detail(request, pk):
+def WorkDetail(request, pk):
     """
     view for the work detail page
     """
@@ -58,35 +59,39 @@ def work_detail(request, pk):
     })
 
 
+class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    view for the work delete page
+    """
+    model = Work
+    template_name = 'blog/work_delete.html'
+    success_url = '/post/'
 
-def work_like(request, pk):
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+
+
+
+class CommentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+    """
+    view for the comment delete page
+    """
+    model = Rating
+    template_name = 'blog/comment_delete.html'
+    success_url = '/post/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
+
+
+
+def WorkLike(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
     else:
         post.likes.add(request.user)
 
-    return HttpResponseRedirect(reverse('work_detail', args=[slug]))
-
-
-def comment_edit(request, slug, rating_id):
-    """
-    View to edit comments
-    """
-    if request.method == "POST":
-        queryset = Work.objects.filter(approved=True)
-        work = get_object_or_404(queryset, pk=pk)
-
-        rating = get_object_or_404(Rating, pk=rating_id)
-        rating_form = RatingForm(data=request.POST, instance=rating)
-
-        if rating_form.is_valid() and rating.user == request.user:
-            rating = rating_form.save(commit=False)
-            rating.work = work
-            rating.approved = False
-            rating.save()
-            messages.add_message(request, messages.SUCCESS, 'Comment Updated!')
-        else:
-            messages.add_message(request, messages.ERROR, 'Error updating comment!')
-
     return HttpResponseRedirect(reverse('work_detail', args=[pk]))
+

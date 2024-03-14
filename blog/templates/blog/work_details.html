@@ -16,8 +16,8 @@
                     <hr>
                     {% if request.user == work.user %}
                     <div class="text-center">
-                        <a href="#" id="btn-post-edit" class="btn btn-primary">Edit</a>
-                        <a href="#" id="btn-post-delete" class="btn btn-danger">Delete</a>
+                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'delete_work' work.id %}" class="btn btn-danger">Delete</a>
                     </div>
                     {% endif %}
                 </div>
@@ -52,14 +52,15 @@
                 <h3 class="card-header">Comments</h3>
                 <div class="card-body">
                     {% for rating in ratings %}
-                    <div
-                        class="{% if not rating.approved and rating.user == user %}faded{% elif not rating.approved %}d-none{% endif %}">
+                    <div class="{% if not rating.approved and rating.user == user %}d-none{% endif %}">
                         <p class="font-weight-bold">{{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
                         <p>{{ rating.content | linebreaks }}</p>
                         {% if user.is_authenticated and rating.user == user %}
-                        <button class="btn btn-primary" data-rating_id="{{ rating.id }}">Edit</button>
-                        <button class="btn btn-danger" data-rating_id="{{ rating.id }}">Delete</button>
+                        <div class="text-center">
+                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="{% url 'delete_comment' rating.id %}" class="btn btn-danger">Delete</a>
+                        </div>
                         {% endif %}
                     </div>
                     {% endfor %}
@@ -91,3 +92,7 @@
     </div>
 
     {% endblock %}
+    <!-- 
+    {% block extras %}
+    <script src="{% static 'js/script.js' %}"></script>
+    {% endblock %} -->

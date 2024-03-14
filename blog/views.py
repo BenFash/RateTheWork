@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import DeleteView
+from django.views.generic import DeleteView, UpdateView
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
@@ -10,7 +10,7 @@ from .forms import RatingForm
 #Create your views here.
 def WorkList(request):
     """
-    view for the post page
+    view for the work page
     """
     queryset = Work.objects.filter(approved=True).order_by("-created_on")
 
@@ -65,11 +65,23 @@ class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = Work
     template_name = 'blog/work_delete.html'
-    success_url = '/post/'
+    success_url = '/work/'
 
     def test_func(self):
         return self.request.user == self.get_object().user
 
+
+# class WorkEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+#     """
+#     view for the work edit page
+#     """
+#     model = Work
+#     template_name = 'blog/work_edit.html'
+#     form_class 
+#     success_url = '/work/'
+
+#     def test_func(self):
+#         return self.request.user == self.get_object().user
 
 
 
@@ -79,11 +91,22 @@ class CommentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     model = Rating
     template_name = 'blog/comment_delete.html'
-    success_url = '/post/'
+    success_url = '/work/'
 
     def test_func(self):
         return self.request.user == self.get_object().user
 
+class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    view for the comment edit page
+    """
+    model = Rating
+    template_name = 'blog/comment_edit.html'
+    form_class = RatingForm
+    success_url = '/work/'
+
+    def test_func(self):
+        return self.request.user == self.get_object().user
 
 
 def WorkLike(request, pk):

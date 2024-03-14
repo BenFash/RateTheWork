@@ -58,7 +58,7 @@
                         <p>{{ rating.content | linebreaks }}</p>
                         {% if user.is_authenticated and rating.user == user %}
                         <div class="text-center">
-                            <a href="#" class="btn btn-primary">Edit</a>
+                            <a href="{% url 'edit_comment' rating.id %}" class="btn btn-primary">Edit</a>
                             <a href="{% url 'delete_comment' rating.id %}" class="btn btn-danger">Delete</a>
                         </div>
                         {% endif %}

@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="card mb-4 mt-3">
-                <img src="{{ work.work_image.url }}" alt="{{ work.title }}" class="card-img-top">
+                <img src="{{ work.work_image.url }}" alt="{{ work.title }}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h1 class="card-title">{{ work.title }}</h1>
                     <p class="card-text">Posted by {{ work.user }} on {{ work.created_on }}</p>
@@ -23,11 +23,13 @@
                 </div>
             </div>
         </div>
+
         <!-- description area -->
         <div class="col-md-6">
             <div class="card mb-4 mt-3">
                 <div class="card-body">
                     <h2 class="card-title">Description</h2>
+                    <hr>
                     <p class="card-text">{{ work.content }}</p>
                 </div>
             </div>
@@ -35,21 +37,27 @@
                 <div class="card-body">
                     {% for category in work.categories.all %}
                     <h2 class="card-title">Category</h2>
+                    <hr>
                     <p class="card-text">{{ category.name }}</p>
                     {% endfor %}
                     <h2 class="card-title">Sub-Category</h2>
+                    <hr>
                     <p class="card-text">{{ work.sub_category }}</p>
                 </div>
             </div>
 
         </div>
     </div>
+
     <!-- Comment area and Leave comment area -->
     <div class="row">
         <!-- Comment area -->
         <div class="col-md-8">
             <div class="card mb-4 mt-3">
-                <h3 class="card-header">Comments</h3>
+                <h3 class="card-header">
+                    Comments
+                    <i class="far fa-comment"></i>
+                </h3>
                 <div class="card-body">
                     {% for rating in ratings %}
                     {% if rating.work == work %}
@@ -69,6 +77,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Leave comment area -->
         <div class="col-md-4">
             <div class="card mb-4 mt-3">
@@ -81,7 +90,10 @@
                     {% if user.is_authenticated %}
 
                     <!-- Likes area-->
-                    <h3 class="card-title">Leave a like</h3>
+                    <h3 class="card-title">
+                        Leave a like
+                        <i class="fa-regular fa-heart"></i>
+                    </h3>
                     <hr>
                     <form class="d-inline" action="{% url 'work_like' work.pk %}" method="POST">
                         {% csrf_token %}
@@ -93,11 +105,14 @@
                                 class="far fa-heart"></i></button>
                         {% endif %}
                     </form>
-                    <p class="card-text mt-1">Total likes: {{ work.likes.all.count }}</p>
+                    <p class="card-text mt-1">Total Likes: {{ work.likes.all.count }}</p>
                     <!-- End likes area-->
-                    <h3 class="card-title mt-2">Leave a comment</h3>
+                    <h3 class="card-title mt-2">
+                        Leave a comment
+                        <i class="fa-regular fa-comment"></i>
+                    </h3>
                     <hr>
-                    <p class="card-text">Posting as: {{ user.username }}</p>
+                    <p class="card-text">Posting As: {{ user.username }}</p>
                     <form method="post" style="margin-top: 1.3em;">
                         {% csrf_token %}
                         {{ rating_form | crispy }}
@@ -111,7 +126,3 @@
     </div>
 
     {% endblock %}
-    <!-- 
-    {% block extras %}
-    <script src="{% static 'js/script.js' %}"></script>
-    {% endblock %} -->

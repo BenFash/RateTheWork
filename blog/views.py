@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import DeleteView, UpdateView
+from django.views.generic import DeleteView, UpdateView , View
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
-from .models import Work, Rating
+from .models import Work, Rating 
 from .forms import RatingForm, WorkForm
 
 #Create your views here.
@@ -20,6 +20,8 @@ def WorkList(request):
     }
     return render(request, 'blog/posts.html', context)
 
+
+
 def CreateWork(request):
     """
     view for the create work page
@@ -30,6 +32,7 @@ def CreateWork(request):
             work = work_form.save(commit=False)
             work.user = request.user
             work.suggested_price = 0
+            work.com
             work.save()
             messages.success(request, 'Work created successfully. Waiting for approval.')
             return HttpResponseRedirect(reverse('work'))
@@ -39,6 +42,8 @@ def CreateWork(request):
     return render(request, 'blog/work_create.html', {
         'work_form': work_form,
     })
+
+
 
 def WorkDetail(request, pk):
     """
@@ -79,6 +84,20 @@ def WorkDetail(request, pk):
 
 
 
+class WorkLike(View):
+    """
+    view for the work like page
+    """
+    def post(self, request, pk, *args, **kwargs):
+        work = get_object_or_404(Work, pk=pk)
+        if work.likes.filter(id=request.user.id).exists():
+            work.likes.remove(request.user)
+        else:
+            work.likes.add(request.user)
+
+        return HttpResponseRedirect(reverse('work_detail', args=[pk]))
+
+
 
 class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
@@ -90,6 +109,7 @@ class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
+
 
 
 class WorkEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
@@ -117,6 +137,8 @@ class CommentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     def test_func(self):
         return self.request.user == self.get_object().user
 
+
+
 class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     """
     view for the comment edit page
@@ -128,19 +150,12 @@ class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
-    # function to se the comment as not approved
+    # function to see the comment as not approved
     def form_valid(self, form):
         form.instance.approved = False 
         messages.success(self.request, 'Comment updated successfully. Waiting for approval.')
         return super().form_valid(form)
 
 
-def WorkLike(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if post.likes.filter(id=request.user.id).exists():
-        post.likes.remove(request.user)
-    else:
-        post.likes.add(request.user)
 
-    return HttpResponseRedirect(reverse('work_detail', args=[pk]))
 

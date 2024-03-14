@@ -79,7 +79,24 @@
                     </div>
                     {% else %}
                     {% if user.is_authenticated %}
-                    <h3 class="card-title">Leave A Comment</h3>
+
+                    <!-- Likes area-->
+                    <h3 class="card-title">Leave a like</h3>
+                    <hr>
+                    <form class="d-inline" action="{% url 'work_like' work.pk %}" method="POST">
+                        {% csrf_token %}
+                        {% if liked %}
+                        <button type="submit" name="blogwork_id" value="{{work.pk}}" class="btn-primary"><i
+                                class="fas fa-heart"></i></button>
+                        {% else %}
+                        <button type="submit" name="blogwork_id" value="{{work.pk}}" class="btn-primary"><i
+                                class="far fa-heart"></i></button>
+                        {% endif %}
+                    </form>
+                    <p class="card-text mt-1">Total likes: {{ work.likes.all.count }}</p>
+                    <!-- End likes area-->
+                    <h3 class="card-title mt-2">Leave a comment</h3>
+                    <hr>
                     <p class="card-text">Posting as: {{ user.username }}</p>
                     <form method="post" style="margin-top: 1.3em;">
                         {% csrf_token %}

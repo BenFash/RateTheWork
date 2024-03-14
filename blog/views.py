@@ -107,6 +107,11 @@ class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
+    
+    def form_valid(self, form):
+        form.instance.approved = False 
+        messages.success(self.request, 'Comment updated successfully. Waiting for approval.')
+        return super().form_valid(form)
 
 
 def WorkLike(request, pk):

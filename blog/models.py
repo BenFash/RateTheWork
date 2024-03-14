@@ -42,7 +42,7 @@ class Work(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
     approved = models.BooleanField(default=False)
-    likes = models.ManyToManyField(User, related_name="work_likes")
+    likes = models.ManyToManyField(User, blank=True, related_name="work_likes" )
 
     class Meta:
         ordering = ['-created_on']

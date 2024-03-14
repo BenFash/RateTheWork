@@ -16,7 +16,7 @@
                     <hr>
                     {% if request.user == work.user %}
                     <div class="text-center">
-                        <a href="#" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'edit_work' work.id %}" class="btn btn-primary">Edit</a>
                         <a href="{% url 'delete_work' work.id %}" class="btn btn-danger">Delete</a>
                     </div>
                     {% endif %}

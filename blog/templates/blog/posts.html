@@ -6,7 +6,9 @@
 {% block content %}
 <section class="text-center">
     <h1 class="p-2">Work</h1>
-    <a href="#" class="btn btn-primary ">Create Work</a>
+    {% if user.is_authenticated %}
+    <a href="{% url 'new_work' %}" class="btn btn-primary ">Create Work</a>
+    {% endif %}
     <div class="container d-flex flex-row flex-wrap justify-content-center">
         {% for w in work %}
         <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">

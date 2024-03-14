@@ -5,7 +5,7 @@ from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
 from .models import Work, Rating
-from .forms import RatingForm
+from .forms import RatingForm, WorkForm
 
 #Create your views here.
 def WorkList(request):
@@ -20,6 +20,25 @@ def WorkList(request):
     }
     return render(request, 'blog/posts.html', context)
 
+def CreateWork(request):
+    """
+    view for the create work page
+    """
+    if request.method == 'POST':
+        work_form = WorkForm(request.POST, request.FILES)
+        if work_form.is_valid():
+            work = work_form.save(commit=False)
+            work.user = request.user
+            work.suggested_price = 0
+            work.save()
+            messages.success(request, 'Work created successfully. Waiting for approval.')
+            return HttpResponseRedirect(reverse('work'))
+    else:
+        work_form = WorkForm()
+
+    return render(request, 'blog/work_create.html', {
+        'work_form': work_form,
+    })
 
 def WorkDetail(request, pk):
     """
@@ -59,6 +78,8 @@ def WorkDetail(request, pk):
     })
 
 
+
+
 class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     """
     view for the work delete page
@@ -71,17 +92,17 @@ class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().user
 
 
-# class WorkEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-#     """
-#     view for the work edit page
-#     """
-#     model = Work
-#     template_name = 'blog/work_edit.html'
-#     form_class 
-#     success_url = '/work/'
+class WorkEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+    """
+    view for the work edit page
+    """
+    model = Work
+    template_name = 'blog/work_edit.html'
+    form_class = WorkForm 
+    success_url = '/work/'
 
-#     def test_func(self):
-#         return self.request.user == self.get_object().user
+    def test_func(self):
+        return self.request.user == self.get_object().user
 
 
 
@@ -107,7 +128,7 @@ class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
-    
+    # function to se the comment as not approved
     def form_valid(self, form):
         form.instance.approved = False 
         messages.success(self.request, 'Comment updated successfully. Waiting for approval.')

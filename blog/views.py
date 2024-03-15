@@ -32,7 +32,6 @@ def CreateWork(request):
             work = work_form.save(commit=False)
             work.user = request.user
             work.suggested_price = 0
-            work.com
             work.save()
             messages.success(request, 'Work created successfully. Waiting for approval.')
             return HttpResponseRedirect(reverse('work'))

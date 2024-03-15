@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import DeleteView, UpdateView , View
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
@@ -13,10 +14,22 @@ def WorkList(request):
     view for the work page
     """
     queryset = Work.objects.filter(approved=True).order_by("-created_on")
+    
+    items_per_page = 4
+
+    paginator = Paginator(queryset, items_per_page)
+    page_number = request.GET.get('page')
+    try:
+        work = paginator.page(page_number)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        work = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        work = paginator.page(paginator.num_pages)
 
     context = {
-        'work': queryset,
-        'paginate_by': 4,
+        'work': work,
     }
     return render(request, 'blog/work.html', context)
 

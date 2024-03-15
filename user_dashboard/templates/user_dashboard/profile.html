@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Profile</h1>
+        <div class="page-intro">
+            <p>
+                Welcome to your profile page. This is your personalized space
+                where you can manage your account, explore your activity.
+            </p>
+            <p>
+                Your profile is a reflection of your
+                journey on our platform, and we're thrilled to have you here!
+            </p>
+        </div>
+        <div class="container">
+            <div class="row justify-content-between text-center">
+                <div class="col-12 col-md-6">
+                    <a href="#" class="btn btn-primary mt-2">Profile Picture</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="#" class="btn btn-primary mt-2">Your Likes</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-center m-3 text-center">
+                <div class="col-12 col-md-6">
+                    <a href="#" class="btn btn-primary mt-2">Your Posts</a>
+                </div>
+            </div>
+
+            <div class="row justify-content-between m-3 text-center">
+                <div class="col-12 col-md-6">
+                    <a href="#" class="btn btn-primary mt-2">Your Comments</a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <a href="#" class="btn btn-primary mt-2">Contact Admin</a>
+                </div>
+            </div>
+        </div>
+</body>
+
+{% endblock %}

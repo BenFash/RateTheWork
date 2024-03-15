@@ -79,7 +79,7 @@ img.logo {
 
 /* index.html */
 
-.home-info {
+.page-intro {
     margin-top: 3rem;
     margin-bottom: 3rem;
     box-shadow: var(--smal-box-shadow);
@@ -92,7 +92,7 @@ img.logo {
     text-decoration: none;
 }
 
-.home-info-title {
+.home-intro-title {
     font-family: var(--title);
 }
 
@@ -129,6 +129,11 @@ img.logo {
     color: rgb(172, 175, 175);
 }
 
+/* profile.html */
+
+.user-dash {
+    margin-top: 5rem;
+}
 
 
 /* Footer */
@@ -161,4 +166,10 @@ a.footer-links {
 
 a.footer-links:hover {
     color: black;
+}
+
+@media screen and (max-width: 720px) {
+    .btn-profile {
+        margin-top: 3rem;
+    }
 }

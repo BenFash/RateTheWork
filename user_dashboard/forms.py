@@ -1,4 +1,4 @@
-from .models import Profile
+from blog.models import Profile
 from django import forms
 
 class ProfileForm(forms.ModelForm):

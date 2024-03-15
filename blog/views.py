@@ -18,7 +18,7 @@ def WorkList(request):
         'work': queryset,
         'paginate_by': 4,
     }
-    return render(request, 'blog/posts.html', context)
+    return render(request, 'blog/work.html', context)
 
 
 

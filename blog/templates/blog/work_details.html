@@ -28,7 +28,10 @@
         <div class="col-md-6">
             <div class="card mb-4 mt-3">
                 <div class="card-body">
-                    <h2 class="card-title">Description</h2>
+                    <h2 class="card-title">
+                        Description
+                        <i class="fa-solid fa-pen"></i>
+                    </h2>
                     <hr>
                     <p class="card-text">{{ work.content }}</p>
                 </div>
@@ -36,11 +39,17 @@
             <div class="card mb-4 mt-3">
                 <div class="card-body">
                     {% for category in work.categories.all %}
-                    <h2 class="card-title">Category</h2>
+                    <h2 class="card-title">
+                        Category
+                        <i class="fa-solid fa-list"></i>
+                    </h2>
                     <hr>
                     <p class="card-text">{{ category.name }}</p>
                     {% endfor %}
-                    <h2 class="card-title">Sub-Category</h2>
+                    <h2 class="card-title">
+                        Sub-Category
+                        <i class="fa-solid fa-list"></i>
+                    </h2>
                     <hr>
                     <p class="card-text">{{ work.sub_category }}</p>
                 </div>

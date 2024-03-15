@@ -4,7 +4,7 @@
 {% block title %}Work{% endblock %}
 
 {% block content %}
-<section class="text-center">
+<div class="text-center">
     <h1 class="p-2">Work</h1>
     {% if user.is_authenticated %}
     <a href="{% url 'new_work' %}" class="btn btn-primary ">Create Work</a>
@@ -13,21 +13,20 @@
         {% for w in work %}
         <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
             <div class="card m-3" style="width: 18rem;">
-                <img src="{{ w.work_image.url }}" class="card-img-top" alt="{{ w.title }}">
+                <img src="{{ w.work_image.url }}" class="card-img-top img-fluid " alt="{{ w.title }}">
                 <div class="card-body">
                     <h2 class="card-title">{{ w.title }}</h2>
                     <div>
                         {% for category in w.categories.all %}
-                        <p class="text-decoration-none"><strong>Category:</strong> {{ category.name }}
-                        </p>
+                        <p>{{ category.name }}</p>
                         {% endfor %}
                     </div>
-                    <p><strong>Likes:</strong> {{ w.likes.all.count }} <i class="fa-regular fa-thumbs-up"></i></p>
-                    <p class="card-text"><strong>Description:</strong> {{ w.content|truncatechars:100 }}</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>{{ w.likes.all.count }}</p>
+                    <p>{{ w.content|truncatechars:100 }}</p>
                 </div>
             </div>
         </a>
         {% endfor %}
     </div>
-</section>
+</div>
 {% endblock %}

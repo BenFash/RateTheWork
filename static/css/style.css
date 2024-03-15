@@ -63,8 +63,8 @@ a.nav-link:hover {
 }
 
 img.logo {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
 }
 
@@ -79,9 +79,14 @@ img.logo {
     border-radius: 10px;
 }
 
+.postcard-content {
+    text-decoration: none;
+}
+
 .home-info-title {
     font-family: var(--title);
 }
+
 
 /* work_detail.html */
 

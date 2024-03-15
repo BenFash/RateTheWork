@@ -25,12 +25,8 @@
             expertise to help one another grow and improve. By providing a space for constructive criticism and
             constructive
             feedback, we empower users to refine their craft and make informed decisions about their projects.
-        </p>
-        <p>
-            At Rate the Work, we believe in the power of community-driven feedback to drive innovation and excellence.
-            Join
-            us on this journey as we work together to elevate the quality of workmanship and creativity across all
-            industries.
+            Join us on this journey as we work together to elevate the quality of workmanship and creativity
+            across all industries.
         </p>
         <p>
             We encourage users to suggest a price they would pay for the work they are rating.
@@ -45,25 +41,39 @@
     {% if query %}
     <h2>Search Results:</h2>
     <div class="container d-flex flex-row flex-wrap justify-content-center">
-        {% for work in object_list %}
-        <a href="{% url 'work_detail' pk=work.pk %}" class="work" aria-label="Click to view {{ work.title }}">
+        {% for w in object_list %}
+        <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
             <div class="card m-3" style="width: 18rem;">
-                <img src="{{ work.work_image.url }}" class="card-img-top img-fluid " alt="{{ work.title }}">
+                <img src="{{ w.work_image.url }}" class="card-img-top img-fluid" alt="{{ w.title }}">
                 <div class="card-body">
-                    <h2 class="card-title">{{ work.title }}</h2>
+                    <h2 class="card-title">{{ w.title }}</h2>
                     <div>
-                        {% for category in work.categories.all %}
+                        {% for category in w.categories.all %}
                         <p>{{ category.name }}</p>
                         {% endfor %}
                     </div>
-                    <p><i class="fa-regular fa-thumbs-up"></i>{{ work.likes.all.count }}</p>
-                    <p>{{ work.content|truncatechars:100 }}</p>
+                    <p><i class="fa-regular fa-thumbs-up"></i>{{ w.likes.all.count }}</p>
+                    <p class="card-content">{{ w.content|truncatechars:100 }}</p>
                 </div>
             </div>
         </a>
         {% endfor %}
     </div>
+    <!-- Pagination -->
+    {% if object_list.has_other_pages %}
+    <nav aria-label="Page navigation">
+        <ul class="pagination justify-content-center">
+            {% if object_list.has_previous %}
+            <li class="page-item"><a href="?page={{ object_list.previous_page_number }}" class="page-link">&laquo;
+                    Previous</a></li>
+            {% endif %}
+            {% if object_list.has_next %}
+            <li class="page-item"><a href="?page={{ object_list.next_page_number }}" class="page-link">Next &raquo;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
     {% endif %}
-
+    {% endif %}
 </section>
 {% endblock %}

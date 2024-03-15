@@ -83,6 +83,19 @@
                         {% endif %}
                     </ul>
                     <!-- Profile pic -->
+                    {% if user.is_authenticated %}
+                    {% if profile.image %}
+                    <a href="{% url 'profile' %}">
+                        <img class="profile-img img-fluid" src="{{ request.user.profile.profile_image.url }}"
+                            alt="user profile pic">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'profile' %}">
+                        <img src="{% static 'images/nobody.jpg' %}" alt="placeholder for profile pic"
+                            class="profile-img img-fluid">
+                    </a>
+                    {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </nav>

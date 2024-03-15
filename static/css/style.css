@@ -68,6 +68,12 @@ img.logo {
     border-radius: 50%;
 }
 
+.profile-img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 5px;
+}
+
 /* form */
 
 .form {

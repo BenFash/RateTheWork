@@ -5,7 +5,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
 from django.db.models import Q
-from .models import Work, Rating 
+from .models import Work, Rating, Profile
 from .forms import RatingForm, WorkForm
 
 #Create your views here.
@@ -59,10 +59,12 @@ def CreateWork(request):
 
 def WorkDetail(request, pk):
     """
-    view for the work detail page
+    view for the work detail page with comments form and likes button
     """
     queryset = Work.objects.filter(approved=True)
     work = get_object_or_404(queryset, pk=pk)
+    profile = Profile.objects.get(user=work.user)
+
     ratings = Rating.objects.filter(approved=True).order_by("-created_on")
     liked = False
     if request.user.is_authenticated and work.likes.filter(id=request.user.id).exists():
@@ -78,6 +80,7 @@ def WorkDetail(request, pk):
             rating_form = RatingForm()
             return render(request, "blog/work_details.html", {
                 "work": work,
+                "profile": profile,                
                 "ratings": ratings,
                 "commented": True,
                 "rating_form":  rating_form,
@@ -88,6 +91,7 @@ def WorkDetail(request, pk):
 
     return render(request, "blog/work_details.html", {
         "work": work,
+        "profile": profile,  
         "ratings": ratings,
         "commented": False,
         "rating_form": rating_form,

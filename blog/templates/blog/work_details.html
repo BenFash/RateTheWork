@@ -13,6 +13,7 @@
                 <div class="card-body card-front-body">
                     <h1 class="card-title">{{ work.title }}</h1>
                     <p class="card-text">Posted by {{ work.user }} on {{ work.created_on }}</p>
+                    <p class="card-text">User Type: {{ profile.user_type }}</p>
                     <hr>
                     {% if request.user == work.user %}
                     <div class="text-center">
@@ -96,7 +97,6 @@
                         Your comment is awaiting approval
                     </div>
                     {% else %}
-
 
                     <!-- Likes area-->
                     <h3 class="card-title">

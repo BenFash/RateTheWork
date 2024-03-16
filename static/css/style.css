@@ -108,25 +108,16 @@ img.logo {
 
 /* work display cards*/
 
-.card {
-    max-width: 17rem;
-    height: 40rem;
-    margin: 1rem;
-}
-
-.card-img-top {
-    width: 100%;
-    height: 30rem;
+.card-front-img {
+    height: 15rem;
     object-fit: cover;
-}
-
-.card-body {
-    overflow: hidden;
 }
 
 .card-content {
     text-align: left;
+    overflow: hidden;
 }
+
 
 
 /* work_detail.html */

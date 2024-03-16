@@ -10,7 +10,7 @@
         <div class="col-md-6">
             <div class="card mb-4 mt-3">
                 <img src="{{ work.work_image.url }}" alt="{{ work.title }}" class="card-img-top img-fluid">
-                <div class="card-body">
+                <div class="card-body card-front-body">
                     <h1 class="card-title">{{ work.title }}</h1>
                     <p class="card-text">Posted by {{ work.user }} on {{ work.created_on }}</p>
                     <hr>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-
+        {% if user.is_authenticated %}
         <!-- Leave comment area -->
         <div class="col-md-4">
             <div class="card mb-4 mt-3">
@@ -96,7 +96,7 @@
                         Your comment is awaiting approval
                     </div>
                     {% else %}
-                    {% if user.is_authenticated %}
+
 
                     <!-- Likes area-->
                     <h3 class="card-title">

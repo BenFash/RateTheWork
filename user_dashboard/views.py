@@ -72,3 +72,29 @@ def ProfilePosts(request):
     }
 
     return render(request, 'user_dashboard/profile_posts.html', context)
+
+
+
+def ProfileLikes(request):
+    """
+    View for the profile likes page
+    """
+    user_likes = Work.objects.filter(likes=request.user).order_by("-created_on")
+
+    items_per_page = 4
+
+    paginator = Paginator(user_likes, items_per_page)
+    page_number = request.GET.get('page')
+    try:
+        user_likes = paginator.page(page_number)
+    except PageNotAnInteger:
+        user_likes = paginator.page(1)
+    except EmptyPage:
+        user_likes = paginator.page(paginator.num_pages)
+
+
+    context = {
+        'user_likes': user_likes,
+    }
+
+    return render(request, 'user_dashboard/profile_likes.html', context)

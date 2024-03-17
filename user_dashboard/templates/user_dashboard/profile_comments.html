@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Your Comments{% endblock %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<!-- Comment area and Leave comment area -->
+<div class="row m-2">
+    <!-- Comment area -->
+    <div class="col-md-8">
+        <div class="card mb-4 mt-3">
+            <h3 class="card-header">
+                Your Comments
+                <i class="far fa-comment"></i>
+            </h3>
+            <div class="card-body">
+                {% for rating in user_ratings %}
+                <div>
+                    <p class="font-weight-bold">{{ rating.user }}</p>
+                    <p class="text-muted">{{ rating.created_on }}</p>
+                    <p>{{ rating.content | linebreaks }}</p>
+                    {% if rating.user == user %}
+                    <div class="text-center">
+                        <a href="{% url 'edit_comment' rating.id %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'delete_comment' rating.id %}" class="btn btn-danger">Delete</a>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

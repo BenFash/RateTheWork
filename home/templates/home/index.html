@@ -44,21 +44,22 @@
         {% for w in object_list %}
         <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
             <div class="card m-3" style="width: 18rem;">
-                <img src="{{ w.work_image.url }}" class="card-img-top img-fluid" alt="{{ w.title }}">
+                <img src="{{ w.work_image.url }}" class="card-img-top card-front-img" alt="{{ w.title }}">
                 <div class="card-body">
-                    <h2 class="card-title">{{ w.title }}</h2>
+                    <h2 class="card-title">{{ w.title|truncatechars:15 }}</h2>
                     <div>
                         {% for category in w.categories.all %}
                         <p>{{ category.name }}</p>
                         {% endfor %}
                     </div>
                     <p><i class="fa-regular fa-thumbs-up"></i>{{ w.likes.all.count }}</p>
-                    <p class="card-content">{{ w.content|truncatechars:100 }}</p>
+                    <p class="card-content">{{ w.content|truncatechars:34 }}</p>
                 </div>
             </div>
         </a>
         {% endfor %}
     </div>
+
     <!-- Pagination -->
     {% if object_list.has_other_pages %}
     <nav aria-label="Page navigation">

@@ -15,7 +15,7 @@ def WorkList(request):
     """
     queryset = Work.objects.filter(approved=True).order_by("-created_on")
     
-    items_per_page = 4
+    items_per_page = 8
 
     paginator = Paginator(queryset, items_per_page)
     page_number = request.GET.get('page')
@@ -59,11 +59,17 @@ def CreateWork(request):
 
 def WorkDetail(request, pk):
     """
-    view for the work detail page with comments form and likes button
+    View for the work detail page with comments form and likes button
     """
     queryset = Work.objects.filter(approved=True)
+    user = request.user
     work = get_object_or_404(queryset, pk=pk)
-    profile = Profile.objects.get(user=work.user)
+
+    # Retrieve or create the profile for the current user
+    try:
+        profile = Profile.objects.get(user=user)
+    except Profile.DoesNotExist:
+        profile = Profile.objects.create(user=user)
 
     ratings = Rating.objects.filter(approved=True).order_by("-created_on")
     liked = False
@@ -80,10 +86,10 @@ def WorkDetail(request, pk):
             rating_form = RatingForm()
             return render(request, "blog/work_details.html", {
                 "work": work,
-                "profile": profile,                
+                "profile": profile,
                 "ratings": ratings,
                 "commented": True,
-                "rating_form":  rating_form,
+                "rating_form": rating_form,
                 "liked": liked
             })
     else:
@@ -91,7 +97,7 @@ def WorkDetail(request, pk):
 
     return render(request, "blog/work_details.html", {
         "work": work,
-        "profile": profile,  
+        "profile": profile,
         "ratings": ratings,
         "commented": False,
         "rating_form": rating_form,

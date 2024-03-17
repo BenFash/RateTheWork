@@ -17,8 +17,10 @@ def Index(request):
             Q(user__username__icontains=query) 
         )
 
+
     # Pagination
-    paginator = Paginator(queryset, 4) 
+    items_per_page = 4
+    paginator = Paginator(queryset, items_per_page)
     page_number = request.GET.get('page')
     try:
         object_list = paginator.page(page_number)

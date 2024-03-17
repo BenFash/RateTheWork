@@ -108,6 +108,10 @@ img.logo {
 
 /* work display cards*/
 
+.card-width {
+    width: 18rem;
+}
+
 .card-front-img {
     height: 15rem;
     object-fit: cover;

@@ -4,43 +4,56 @@
 {% block title %}Work{% endblock %}
 
 {% block content %}
-<div class="text-center">
+
+<div class="container text-center">
     <h1 class="p-2">Work</h1>
     {% if user.is_authenticated %}
-    <a href="{% url 'new_work' %}" class="btn btn-primary mt-2">Create Work</a>
-    {% endif %}
-    <div class="container d-flex flex-row flex-wrap justify-content-center mt-5">
-        {% for w in work %}
-        <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
-            <div class="card m-3" style="width: 18rem;">
-                <img src="{{ w.work_image.url }}" class="card-img-top card-front-img" alt="{{ w.title }}">
-                <div class="card-body">
-                    <h2 class="card-title">{{ w.title|truncatechars:15 }}</h2>
-                    <div>
-                        {% for category in w.categories.all %}
-                        <p>{{ category.name }}</p>
-                        {% endfor %}
-                    </div>
-                    <p><i class="fa-regular fa-thumbs-up"></i>{{ w.likes.all.count }}</p>
-                    <p class="card-content">{{ w.content|truncatechars:34 }}</p>
-                </div>
-            </div>
-        </a>
-        {% endfor %}
+    <a href="{% url 'new_work' %}" class="btn btn-primary">Create Work</a>
+    <div class="page-intro">
+        When sharing your work with our community, it's important to provide clear information to help
+        others understand your project. The more detailed and informative your content is, the more engaging
+        and helpful it will be for our community members. So please provide a clear title and image with
+        your post, along with as much detail in the content as possible. Describe what you're looking for
+        from the community, whether it's feedback, advice, collaboration opportunities, or simply to
+        showcase your work. Feel free to include any relevant external links
+        such as your project portfolio or any related articles. Your contribution enriches our platform
+        and fosters collaboration and inspiration among our members.
+        Thank you for sharing your creativity with us!
     </div>
-    <!-- create new pages with paginate and page_obj -->
-    {% if work.has_other_pages %}
-    <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-            {% if work.has_previous %}
-            <li class="page-item"><a href="?page={{ work.previous_page_number }}" class="page-link">&laquo; Previous</a>
-            </li>
-            {% endif %}
-            {% if work.has_next %}
-            <li class="page-item"><a href="?page={{ work.next_page_number }}" class="page-link">Next &raquo;</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-    {% endif %}
+</div>
+{% endif %}
+<div class="container d-flex flex-row flex-wrap justify-content-center">
+    {% for w in work %}
+    <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
+        <div class="card m-3" style="width: 18rem;">
+            <img src="{{ w.work_image.url }}" class="card-img-top card-front-img" alt="{{ w.title }}">
+            <div class="card-body">
+                <h2 class="card-title">{{ w.title|truncatechars:15 }}</h2>
+                <div>
+                    {% for category in w.categories.all %}
+                    <p>{{ category.name }}</p>
+                    {% endfor %}
+                </div>
+                <p><i class="fa-regular fa-thumbs-up"></i>{{ w.likes.all.count }}</p>
+                <p class="card-content">{{ w.content|truncatechars:34 }}</p>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+<!-- create new pages with paginate and page_obj -->
+{% if work.has_other_pages %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if work.has_previous %}
+        <li class="page-item"><a href="?page={{ work.previous_page_number }}" class="page-link">&laquo; Previous</a>
+        </li>
+        {% endif %}
+        {% if work.has_next %}
+        <li class="page-item"><a href="?page={{ work.next_page_number }}" class="page-link">Next &raquo;</a></li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 </div>
 {% endblock %}

@@ -15,7 +15,7 @@ def WorkList(request):
     """
     queryset = Work.objects.filter(approved=True).order_by("-created_on")
     
-    items_per_page = 8
+    items_per_page = 4
 
     paginator = Paginator(queryset, items_per_page)
     page_number = request.GET.get('page')

@@ -1,5 +1,5 @@
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import render
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from blog.models import Work
 
@@ -23,14 +23,14 @@ def Index(request):
     paginator = Paginator(queryset, items_per_page)
     page_number = request.GET.get('page')
     try:
-        object_list = paginator.page(page_number)
+        work = paginator.page(page_number)
     except PageNotAnInteger:
-        object_list = paginator.page(1)
+        work = paginator.page(1)
     except EmptyPage:
-        object_list = paginator.page(paginator.num_pages)
+        work = paginator.page(paginator.num_pages)
 
     context = {
         'query': query,
-        'object_list': object_list,
+        'work': work,
     }
     return render(request, 'home/index.html', context)

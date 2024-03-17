@@ -41,7 +41,7 @@
     {% if query %}
     <h2>Search Results:</h2>
     <div class="container d-flex flex-row flex-wrap justify-content-center">
-        {% for w in object_list %}
+        {% for w in work %}
         <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
             <div class="card m-3" style="width: 18rem;">
                 <img src="{{ w.work_image.url }}" class="card-img-top card-front-img" alt="{{ w.title }}">
@@ -61,15 +61,15 @@
     </div>
 
     <!-- Pagination -->
-    {% if object_list.has_other_pages %}
+    {% if work.has_other_pages %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
-            {% if object_list.has_previous %}
-            <li class="page-item"><a href="?page={{ object_list.previous_page_number }}" class="page-link">&laquo;
+            {% if work.has_previous %}
+            <li class="page-item"><a href="?page={{ work.previous_page_number }}" class="page-link">&laquo;
                     Previous</a></li>
             {% endif %}
-            {% if object_list.has_next %}
-            <li class="page-item"><a href="?page={{ object_list.next_page_number }}" class="page-link">Next &raquo;</a>
+            {% if work.has_next %}
+            <li class="page-item"><a href="?page={{ work.next_page_number }}" class="page-link">Next &raquo;</a>
             </li>
             {% endif %}
         </ul>

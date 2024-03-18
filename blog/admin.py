@@ -24,3 +24,4 @@ class ProfileAdmin(admin.ModelAdmin):
     list_display = ('user', 'profile_image', 'user_type')
     list_filter = ('user_type',)
     search_fields = ('user__username', 'user_type')
+ 

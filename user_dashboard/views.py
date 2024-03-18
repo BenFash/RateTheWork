@@ -2,8 +2,9 @@ from django.shortcuts import render, reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
-from .forms import ProfileForm
+from .forms import ProfileForm, ContactAdminForm
 from blog.models import Work, Rating
+from .models import ContactAdmin
 
 
 # Create your views here.
@@ -98,3 +99,26 @@ def ProfileLikes(request):
     }
 
     return render(request, 'user_dashboard/profile_likes.html', context)
+
+
+
+def ProfileContact(request):
+    """
+    View for the contact admin page
+    """
+    contactadmin = ContactAdmin.objects.all().order_by('-created_at').first()
+    contact_admin_form = ContactAdminForm() 
+    
+    if request.method == 'POST':
+        contact_admin_form = ContactAdminForm(request.POST, request.FILES)
+        if contact_admin_form.is_valid():
+            contact_ad_form = contact_admin_form.save(commit=False)
+            contact_ad_form.user = request.user            
+            contact_ad_form.save()
+            messages.success(request, 'Message sent successfully. Please expect a response within 3 working days.')
+            return HttpResponseRedirect(reverse('profile'))
+
+    return render(request, 'user_dashboard/profile_contact.html', {
+        'contactadmin' : contactadmin,
+        'contact_admin_form': contact_admin_form,
+    })

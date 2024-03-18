@@ -8,4 +8,5 @@ urlpatterns = [
     path('profile_comments/', views.ProfileComments, name='profile_comments'),
     path('profile_posts/', views.ProfilePosts, name='profile_posts'),
     path('profile_likes/', views.ProfileLikes, name='profile_likes'),
+    path('contact_admin/', views.ProfileContact, name='contact_admin'),
 ]

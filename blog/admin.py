@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Work, Category, Rating
+from .models import Work, Category, Rating, Profile
 
 # Register your models here.
 @admin.register(Work)
@@ -19,3 +19,8 @@ class RatingAdmin(admin.ModelAdmin):
     list_filter = ('approved', 'created_on')
     search_fields = ('user__username', 'content', 'work__title')
  
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('user', 'profile_image', 'user_type')
+    list_filter = ('user_type',)
+    search_fields = ('user__username', 'user_type')

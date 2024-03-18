@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'blog',
     'home',
     'user_dashboard',
+    'contact',
 ]
 
 SITE_ID = 1

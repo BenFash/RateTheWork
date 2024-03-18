@@ -21,22 +21,25 @@ def ProfileView(request):
 @login_required
 def UploadProfilePic(request):
     """
-    view for upload profile picture page
+    View for upload profile picture page
     """
-    user = get_object_or_404(Profile, user=request.user)
+    # Get or create the profile for the current user
+    profile = get_object_or_404(Profile, user=request.user)
+
     if request.method == 'POST':
-        profile_pic_form = ProfileForm(request.POST, request.FILES, instance=user)
+        profile_pic_form = ProfileForm(request.POST, request.FILES, instance=profile)
         if profile_pic_form.is_valid():
+            profile = profile_pic_form.save(commit=False)
             if "profile_image" in request.FILES:
-                user.profile_image = request.FILES['profile_image']
-            user.user_type = profile_pic_form.cleaned_data['user_type']
-            user.save()
+                profile.profile_image = request.FILES['profile_image']
+            profile.user_type = profile_pic_form.cleaned_data['user_type']
+            profile.save()
             messages.success(request, 'Profile update uploaded successfully.')
             return HttpResponseRedirect(reverse('profile'))
         else:
             messages.error(request, 'Error: please try again.')
     else:
-        profile_pic_form = ProfileForm(instance=user)
+        profile_pic_form = ProfileForm(instance=profile)
 
     template = 'user_dashboard/profile_picture.html'
     context = {

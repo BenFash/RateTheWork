@@ -62,12 +62,12 @@ def WorkDetail(request, pk):
     """
     queryset = Work.objects.filter(approved=True)
     work = get_object_or_404(queryset, pk=pk)
-
+    
     ratings = Rating.objects.filter(approved=True).order_by("-created_on")
     liked = False
     if request.user.is_authenticated and work.likes.filter(id=request.user.id).exists():
         liked = True
-
+    # Rating form post
     if request.method == 'POST':
         rating_form = RatingForm(data=request.POST)
         if rating_form.is_valid():

@@ -56,20 +56,12 @@ def CreateWork(request):
     })
 
 
-
 def WorkDetail(request, pk):
     """
     View for the work detail page with comments form and likes button
     """
     queryset = Work.objects.filter(approved=True)
-    user = request.user
     work = get_object_or_404(queryset, pk=pk)
-
-    # Retrieve or create the profile for the current user
-    try:
-        profile = Profile.objects.get(user=user)
-    except Profile.DoesNotExist:
-        profile = Profile.objects.create(user=user)
 
     ratings = Rating.objects.filter(approved=True).order_by("-created_on")
     liked = False
@@ -83,6 +75,11 @@ def WorkDetail(request, pk):
             rating.work = work
             rating.user = request.user
             rating.save()
+            # Retrieve or create the profile for the current user
+            try:
+                profile = Profile.objects.get(user=request.user)
+            except Profile.DoesNotExist:
+                profile = Profile.objects.create(user=request.user)
             rating_form = RatingForm()
             return render(request, "blog/work_details.html", {
                 "work": work,
@@ -97,7 +94,6 @@ def WorkDetail(request, pk):
 
     return render(request, "blog/work_details.html", {
         "work": work,
-        "profile": profile,
         "ratings": ratings,
         "commented": False,
         "rating_form": rating_form,
@@ -118,6 +114,7 @@ class WorkLike(LoginRequiredMixin, View):
 
         return HttpResponseRedirect(reverse('work_detail', args=[pk]))
 
+
 @login_required
 def WorkDelete(request, pk):
     """
@@ -130,6 +127,7 @@ def WorkDelete(request, pk):
     work.delete()
     messages.success(request, 'Work Deleted successfully.')
     return HttpResponseRedirect(reverse('work'))
+
 
 @login_required
 def WorkEdit(request, pk):

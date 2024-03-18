@@ -1,10 +1,10 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views.generic import DeleteView, UpdateView , View
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
-from django.db.models import Q
 from .models import Work, Rating, Profile
 from .forms import RatingForm, WorkForm
 
@@ -34,7 +34,7 @@ def WorkList(request):
     return render(request, 'blog/work.html', context)
 
 
-
+@login_required
 def CreateWork(request):
     """
     view for the create work page
@@ -105,8 +105,7 @@ def WorkDetail(request, pk):
     })
 
 
-
-class WorkLike(View):
+class WorkLike(LoginRequiredMixin, View):
     """
     view for the work like page
     """
@@ -119,7 +118,7 @@ class WorkLike(View):
 
         return HttpResponseRedirect(reverse('work_detail', args=[pk]))
 
-
+@login_required
 def WorkDelete(request, pk):
     """
     view for the work delete page
@@ -132,7 +131,7 @@ def WorkDelete(request, pk):
     messages.success(request, 'Work Deleted successfully.')
     return HttpResponseRedirect(reverse('work'))
 
-
+@login_required
 def WorkEdit(request, pk):
     """
     view for the work edit page
@@ -167,7 +166,6 @@ class CommentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
-
 
 
 class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):

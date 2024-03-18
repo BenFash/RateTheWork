@@ -19,8 +19,7 @@ def Index(request):
 
 
     # Pagination
-    items_per_page = 4
-    paginator = Paginator(queryset, items_per_page)
+    paginator = Paginator(queryset, 3)
     page_number = request.GET.get('page')
     try:
         work = paginator.page(page_number)

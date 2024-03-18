@@ -1,13 +1,15 @@
-from django.shortcuts import render, reverse
+from django.shortcuts import render, reverse, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm, ContactAdminForm
-from blog.models import Work, Rating
+from blog.models import Work, Rating, Profile
 from .models import ContactAdmin
 
 
 # Create your views here.
+@login_required
 def ProfileView(request):
     """
     view for profile page
@@ -16,27 +18,34 @@ def ProfileView(request):
 
 
 
+@login_required
 def UploadProfilePic(request):
     """
     view for upload profile picture page
     """
+    user = get_object_or_404(Profile, user=request.user)
     if request.method == 'POST':
-        profile_pic_form = ProfileForm(request.POST, request.FILES)
+        profile_pic_form = ProfileForm(request.POST, request.FILES, instance=user)
         if profile_pic_form.is_valid():
-            pic_form = profile_pic_form.save(commit=False)
-            pic_form.user = request.user            
-            pic_form.save()
-            messages.success(request, 'Profile picture uploaded successfully.')
+            if "profile_image" in request.FILES:
+                user.profile_image = request.FILES['profile_image']
+            user.user_type = profile_pic_form.cleaned_data['user_type']
+            user.save()
+            messages.success(request, 'Profile update uploaded successfully.')
             return HttpResponseRedirect(reverse('profile'))
+        else:
+            messages.error(request, 'Error: please try again.')
     else:
-        profile_pic_form = ProfileForm()
+        profile_pic_form = ProfileForm(instance=user)
 
-    return render(request, 'user_dashboard/profile_picture.html', {
+    template = 'user_dashboard/profile_picture.html'
+    context = {
         'profile_pic_form': profile_pic_form,
-    })
+    }
+    return render(request, template, context)
 
 
-
+@login_required
 def ProfileComments(request):
     """
     View for the profile comments page
@@ -50,7 +59,7 @@ def ProfileComments(request):
     return render(request, 'user_dashboard/profile_comments.html', context)
 
 
-
+@login_required
 def ProfilePosts(request):
     """
     View for the profile posts page
@@ -75,7 +84,7 @@ def ProfilePosts(request):
     return render(request, 'user_dashboard/profile_posts.html', context)
 
 
-
+@login_required
 def ProfileLikes(request):
     """
     View for the profile likes page
@@ -101,7 +110,7 @@ def ProfileLikes(request):
     return render(request, 'user_dashboard/profile_likes.html', context)
 
 
-
+@login_required
 def ProfileContact(request):
     """
     View for the contact admin page

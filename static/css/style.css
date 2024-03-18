@@ -45,6 +45,8 @@ main {
 
 .active {
     font-weight: 700;
+    border-bottom: 1px solid var(--body);
+
 }
 
 
@@ -55,7 +57,7 @@ main {
 }
 
 a.nav-link {
-    color: var(--body);
+    color: var(--body) !important;
     transition: all 0.3s ease;
 }
 

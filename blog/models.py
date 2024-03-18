@@ -20,6 +20,10 @@ class Profile(models.Model):
     profile_image = CloudinaryField('image', default='placeholder', blank=True, null=True)
     user_type = models.CharField(max_length=50, choices=USER_TYPE, default="personal")
 
+    def __str__(self):
+        return self.user.username
+
+
 class Category(models.Model):
     """
     model for work category

@@ -120,32 +120,41 @@ class WorkLike(View):
         return HttpResponseRedirect(reverse('work_detail', args=[pk]))
 
 
-
-class WorkDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+def WorkDelete(request, pk):
     """
     view for the work delete page
     """
-    model = Work
-    template_name = 'blog/work_delete.html'
-    success_url = '/work/'
+    work = get_object_or_404(Work, pk=pk)
+    if request.user != work.user:
+        messages.error(request, 'You do not have permission.')
+        return HttpResponse('Unauthorized', status=403)
+    work.delete()
+    messages.success(request, 'Work Deleted successfully.')
+    return HttpResponseRedirect(reverse('work'))
 
-    def test_func(self):
-        return self.request.user == self.get_object().user
 
-
-
-class WorkEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+def WorkEdit(request, pk):
     """
     view for the work edit page
     """
-    model = Work
-    template_name = 'blog/work_edit.html'
-    form_class = WorkForm 
-    success_url = '/work/'
+    work = get_object_or_404(Work, pk=pk)
+    if request.user != work.user:
+        messages.error(request, 'You do not have permission.')
+        return HttpResponse('Unauthorized', status=403)
+    if request.method == 'POST':
+        work_form = WorkForm(request.POST, request.FILES, instance=work)
+        if work_form.is_valid():
+            work = work_form.save(commit=False)
+            work.user = request.user
+            work.save()
+            messages.success(request, 'Work updated successfully. Waiting for approval.')
+            return HttpResponseRedirect(reverse('work'))
+    else:
+        work_form = WorkForm(instance=work)
 
-    def test_func(self):
-        return self.request.user == self.get_object().user
-
+    return render(request, 'blog/work_edit.html', {
+        'work_form': work_form,
+    })
 
 
 class CommentDelete(LoginRequiredMixin, UserPassesTestMixin, DeleteView):

@@ -77,6 +77,9 @@ img.logo {
     border-radius: 5px;
 }
 
+.toggler-color {
+    background-color: var(--body);
+}
 
 /* form */
 
@@ -109,7 +112,6 @@ img.logo {
 
 
 /* work display cards*/
-
 .card-width {
     width: 18rem;
 }
@@ -125,9 +127,7 @@ img.logo {
 }
 
 
-
 /* work_detail.html */
-
 .rating {
     padding: 10px;
 }
@@ -138,7 +138,6 @@ img.logo {
 
 
 /* profile.html */
-
 .user-dash {
     margin-top: 5rem;
 }
@@ -156,7 +155,6 @@ footer {
     border-top: var(--border);
 }
 
-
 .social-icons {
     font-size: 1.5rem;
     margin: .5rem .5rem;
@@ -168,10 +166,5 @@ footer {
 }
 
 a.footer-links {
-    text-decoration: none;
     color: var(--body);
-}
-
-a.footer-links:hover {
-    color: black;
 }

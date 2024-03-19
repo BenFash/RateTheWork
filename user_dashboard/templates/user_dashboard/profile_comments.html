@@ -21,6 +21,7 @@
                             class="btn btn-primary">{{ rating.work }}</a></p>
                     <p class="text-muted">{{ rating.created_on }}</p>
                     <p>{{ rating.content | linebreaks }}</p>
+                    <p><strong>Suggested Price:</strong> £{{ rating.suggested_price }}</p>
                     {% if rating.user == user %}
                     <div class="text-center">
                         <a href="{% url 'edit_comment' rating.id %}" class="btn btn-primary">Edit</a>

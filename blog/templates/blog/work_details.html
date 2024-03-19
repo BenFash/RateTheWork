@@ -72,9 +72,10 @@
                     {% for rating in ratings %}
                     {% if rating.work == work %}
                     <div class="{% if not rating.approved %}d-none{% endif %}">
-                        <p class="font-weight-bold">{{ rating.user }}</p>
+                        <p><strong>Username:</strong> {{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
                         <p>{{ rating.content | linebreaks }}</p>
+                        <p><strong>Suggested Price:</strong> £{{ rating.suggested_price }}</p>
                         {% if user.is_authenticated and rating.user == user %}
                         <div class="text-center">
                             <a href="{% url 'edit_comment' rating.id %}" class="btn btn-primary">Edit</a>

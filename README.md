@@ -4,166 +4,90 @@
 [![GitHub last commit](https://img.shields.io/github/last-commit/BenFash/RateTheWork)](https://github.com/BenFash/RateTheWork/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/BenFash/RateTheWork)](https://github.com/BenFash/RateTheWork)
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-In this section, you will include a few paragraphs providing an overview of your project.
-Essentially, this part is your "sales pitch".
+Welcome to Rate The Work a vibrant online community dedicated to sharing and evaluating creative projects from individuals and companies worldwide.
 
-At this stage, you should have a name for your project so use it!
-Don't introduce the project as a "portfolio project" for the diploma.
+At Rate the Work, we believe that constructive feedback and collaboration are essential for personal and professional growth. Whether you're an artist, designer, freelancer, entrepreneur, or company our platform provides a supportive environment where you can showcase your work, receive valuable insights, and connect with like-minded individuals.
 
-In this section, describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
+The site is also tailored for members of the public to post works completed for them to get a second opinion of the craftsmanship. Our mission is to empower users to refine their craft, make informed decisions, and elevate the quality of their projects. Through the exchange of feedback, ideas, and inspiration, we aim to foster creativity, innovation, and excellence across all industries. We encourage users to suggest how much they would pay for the work whilst making their comments.
 
-Consider adding a mockup image using the "Am I Responsive" website.
-Here's your deployed site as an example:
-https://ui.dev/amiresponsive?url=https://rate-the-work-0f63389025f9.herokuapp.com
+![screenshot](documentation/responsiveness/1080HD-response.png)
+![screenshot](documentation/responsiveness/medium-response.png)
+![screenshot](documentation/responsiveness/medium-response-footer.png)
+![screenshot](documentation/responsiveness/mobile-response.png)
+![screenshot](documentation/responsiveness/mobile-response-footer.png)
 
-Screenshots for the README and testing should not be inside of `assets/` or `static/` image folders.
-(reminder: `assets/` and `static/` are for files used on the live site, not documentation)
-Consider adding a new folder called `documentation`, and add the amiresponsive screenshot inside of that folder.
-To add the image into your README, use this format:
-(assuming you have a new folder called `documentation` with an image called "mockup.png")
-
-![screenshot](documentation/mockup.png)
-
-Note: Markdown files (.md) should not contain HTML elements like `img`, `br`, `div`, `a`, etc, only Markdown formatting.
-Find out more about using Markdown elements here:
-https://pandao.github.io/editor.md/en.html
-
----
-
-GitHub now supports CALLOUTS in Markdown files.
-There are some callouts already embedded in this application for you.
-However, if you feel that you want to add more, there are certain ones you can use.
-
-NOTE: the preview for callouts isn't yet supported in Gitpod/Codeanywhere/VSCode/etc.
-You'll have to commit/push the changes to GitHub to see it in action.
-
-> [!NOTE]  
-> BLUE: Highlights information that users should take into account, even when skimming.
-
-> [!TIP]  
-> GREEN: Optional information to help a user be more successful.
-
-> [!IMPORTANT]  
-> PURPLE: Crucial information necessary for users to succeed.
-
-> [!WARNING]  
-> YELLOW: Critical content demanding immediate user attention due to potential risks.
-
-> [!CAUTION]  
-> RED: Negative potential consequences of an action.
-
-Source: https://github.com/orgs/community/discussions/16925
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ## UX
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-In this section, you will briefly explain your design processes.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+In designing this project, my primary focus was on achieving a clean and simple design that prioritizes accessibility and ease of use. I aimed to ensure that all essential functions are readily available and easy to navigate, with responsiveness integrated through Bootstrap.
 
 ### Colour Scheme
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
 
-Explain your colours and the colour scheme.
+For the colour scheme, I opted for a clean and minimalist approach, with blue as the dominant colour to reflect a sense of professionalism and tranquility. Here are the key colours used throughout the project:
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-- `#000000` used for primary text.
-- `#E84610` used for primary highlights.
-- `#4A4A4F` used for secondary text.
-- `#009FE3` used for secondary highlights.
+- `#D7CDCC`: off-white color used for the body of website and nav and footer text.
+- `#034078`:  indigo-blue color used for the nav, footer.
+- `#001F54`: dark blue used for font and logo 
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
+I used [coolors.co](https://coolors.co/d7cdcc-034078-001f54-0074d9-fefcfb) to generate my colour palette.
 
-Consider adding a link and screenshot for your colour scheme using "coolors".
-https://coolors.co/generate
+![screenshot](documentation/other/coolorspallete.png)
 
-When you add a colour to the palette, the URL is dynamically updated, making it easier for you to return back to your colour palette later if needed.
-
-Example:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I used [coolors.co](https://coolors.co/e84610-009fe3-4a4a4f-445261-d63649-e6ecf0-000000) to generate my colour palette.
-
-![screenshot](documentation/coolors.png)
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
-
-⚠️ ONLY IF YOU ACTUALLY ADDED `:root` variables in CSS! ⚠️
-If you've used CSS `:root` variables, consider also including a code snippet here!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I've used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
+I've have also used CSS `:root` variables to easily update the global colour scheme by changing only one value, instead of everywhere in the CSS file.
 
 ```css
 :root {
-    /* P = Primary | S = Secondary */
-    --p-text: #000000;
-    --p-highlight: #E84610;
-    --s-text: #4A4A4F;
-    --s-highlight: #009FE3;
-    --white: #FFFFFF;
-    --black: #000000;
+    --body: #D7CDCC;
+    --navfooter: #034078;
+    --font-color: #001F54;
 }
 ```
 
 ### Typography
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑START OF NOTES (to be deleted)
+To help me with font pairing I used fontpair.co. I settled on the below paring as Oswald's modern and bold style complements Source Sans Pro's clean and neutral design.
 
-Explain any fonts and icon libraries used, like Google Fonts and/or Font Awesome.
+    'Oswald' : Oswald is a bold and condensed font with strong geometric shapes, making it ideal for headlines and titles. Its boldness contrasts well with the lighter weight and more open design of Source Sans Pro, creating visual interest,
+    'Source Sans Pro' : Source Sans Pro is designed for optimal readability on screens ideal for text other than headers.
 
-Consider adding a link to each font used, and the Font Awesome site if used (or similar icon library).
+The overall pairing of Oswald and Source Sans Pro fonts provides a harmonious balance of boldness and readability, making them well-suited for my project.
 
-Example:
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
+- [Oswald](https://fonts.google.com/specimen/Oswald?query=Oswald) was used for the primary headers and titles.
 
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
+- Source Sans Pro was used for all other font. 
 
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
-
-- [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
+- [Font Awesome](https://fontawesome.com) icons were used throughout the site. For the social media icons in the footer and icons in work_details.html cards.
 
 ## User Stories
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 START OF NOTES (to be deleted)
-
-In this section, list all of your user stories for the project.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ### New Site Users
 
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
-- As a new site user, I would like to ____________, so that I can ____________.
+- As a user I would like to be able to search for posts based on keywords or categories, so that I can find relevant content.
+- As a user I would like to be able to view posts so that I can see works completed/received by the community.
+- As a user I would like to be able to contact admin so that I can provide feedback and suggestions.
+- As a user I would like to know that i am at the correct site so that I can be ensured im engaging with the correct community.
+- As a user I would like to sign up to the site so that I can make posts and comments.
+
 
 ### Returning Site Users
 
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
-- As a returning site user, I would like to ____________, so that I can ____________.
+- As a registered user I would like to be able to create a new post so that i can showcase my work/project in order to receive feedback from the community.
+- As a registered user I would like to comment on posts made by other users so that i can provide feedback and engage with the community.
+- As a registered user I would like to to be able to like/dislike posts made by other users so that i can provide quick feedback.
+- As a registered user I would like to be able to view my own posts so that i can keep track of my contributions to the platform.
+- As a registered user I would like to be able to edit and delete my comments so that i can amend them if i have made a mistake.
+- As a registered user I would like to be able to edit and delete my posts so that i can edit and amend if needed.
+- As a registered user I would like to upload a profile picture so that i can add personality to my account.
 
 ### Site Admin
 
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
-- As a site administrator, I should be able to ____________, so that I can ____________.
+- As a site administrator I would like to be able to approve posts and comments so that i can maintain a positive and respectful community environment.
+- As site administrator I would like to have a about page so that i can give users more info about the site.
 
 ## Wireframes
 

@@ -17,7 +17,6 @@ The site is also tailored for members of the public to post works completed for 
 ![screenshot](documentation/responsiveness/mobile-response.png)
 ![screenshot](documentation/responsiveness/mobile-response-footer.png)
 
-
 ## UX
 
 
@@ -109,74 +108,86 @@ for the Mobile, Tablet, and Desktop wireframes.
 
 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
-To follow best practice, wireframes were developed for mobile, tablet, and desktop sizes.
+Wireframes were developed for mobile and desktop sizes.
 I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wireframes.
 
 ### Mobile Wireframes
 
-< details >
-< summary > Click here to see the Mobile Wireframes < / summary >
+<details>
+<summary> Click here to see the Mobile Wireframes</summary>
 
 Home
-  - ![screenshot](documentation/wireframes/mobile-home.png)
+  - ![screenshot](documentation/wireframes/mobile/mobile-home-wire.png)
 
-About
-  - ![screenshot](documentation/wireframes/mobile-about.png)
+Works
+  - ![screenshot](documentation/wireframes/mobile/mobile-works-wire.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/mobile-contact.png)
+Works Detail
+  - ![screenshot](documentation/wireframes/mobile/mobile-worksdetail-wire.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/mobile-gallery.png)
+Profile
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-wire.png)
 
-etc.
-  - repeat for any remaining mobile wireframes
+Profile Pic Upload
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-pic-wire.png)
 
-< / details >
+Profile Comments
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-comments-wire.png)
 
-### Tablet Wireframes
+Profile Posts
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-posts-wire.png)
 
-< details >
-< summary > Click here to see the Tablet Wireframes < / summary >
+Profile Likes
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-likes-wire.png)
 
-Home
-  - ![screenshot](documentation/wireframes/tablet-home.png)
+Profile Contact
+  - ![screenshot](documentation/wireframes/mobile/mobile-profile-contact-wire.png)
 
-About
-  - ![screenshot](documentation/wireframes/tablet-about.png)
+About Us
+  - ![screenshot](documentation/wireframes/mobile/mobile-about-wire.png)  
 
-Contact
-  - ![screenshot](documentation/wireframes/tablet-contact.png)
-
-Gallery
-  - ![screenshot](documentation/wireframes/tablet-gallery.png)
-
-etc.
-  - repeat for any remaining tablet wireframes
-
-< / details >
+Contact Us
+  - ![screenshot](documentation/wireframes/mobile/mobile-contact-wire.png)  
+</details>
 
 ### Desktop Wireframes
 
-< details >
-< summary > Click here to see the Desktop Wireframes < / summary >
+<details>
+<summary> Click here to see the Desktop Wireframes </summary>
 
 Home
-  - ![screenshot](documentation/wireframes/desktop-home.png)
+  - ![screenshot](documentation/wireframes/desktop/desktop-home-wire.png)
 
-About
-  - ![screenshot](documentation/wireframes/desktop-about.png)
+Works
+  - ![screenshot](documentation/wireframes/desktop/desktop-works-wire.png)
 
-Contact
-  - ![screenshot](documentation/wireframes/desktop-contact.png)
+Works Detail
+  - ![screenshot](documentation/wireframes/desktop/desktop-work-detail-wire.png)
 
-Gallery
-  - ![screenshot](documentation/wireframes/desktop-gallery.png)
+Profile
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-wire.png)
 
-etc.
-  - repeat for any remaining desktop wireframes
+Profile Pic Upload
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-pic-wire.png)
 
-< / details >
+Profile Comments
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-comments-wire.png)
+
+Profile Posts
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-posts-wire.png)
+
+Profile Likes
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-likes-wire.png)
+
+Profile Contact
+  - ![screenshot](documentation/wireframes/desktop/desktop-profile-contact-wire.png)
+
+About Us
+  - ![screenshot](documentation/wireframes/desktop/desktop-about-wire.png)  
+
+Contact Us
+  - ![screenshot](documentation/wireframes/desktop/desktop-contact-wire.png)  
+</details>
 
 ## Features
 

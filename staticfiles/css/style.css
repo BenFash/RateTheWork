@@ -15,6 +15,8 @@
 }
 
 
+/* Generic */
+
 html,
 body {
     height: 100%;
@@ -24,6 +26,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family: var(--main-font);
+    color: var(--font-color);
 }
 
 h1,
@@ -40,28 +43,105 @@ main {
     background-color: var(--body);
 }
 
+.active {
+    font-weight: 700;
+    border-bottom: 1px solid var(--body);
+
+}
 
 
 /* Header  */
 .navbar {
-    background-color: var(--navfooter) !important;
+    background-color: var(--navfooter);
     box-shadow: var(--smal-box-shadow);
 }
 
 a.nav-link {
-    color: var(--body);
+    color: var(--body) !important;
+    transition: all 0.3s ease;
 }
 
-.active {
-    font-weight: 700;
-
+a.nav-link:hover {
+    transform: scale(1.1);
 }
 
 img.logo {
-    width: 5rem;
-    height: 5rem;
+    width: 6rem;
+    height: 6rem;
     border-radius: 50%;
 }
+
+.profile-img {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 5px;
+}
+
+.toggler-color {
+    background-color: var(--body);
+}
+
+/* form */
+
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--smal-box-shadow);
+    border-radius: 5px;
+}
+
+
+/* index.html */
+
+.page-intro {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: var(--smal-box-shadow);
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+.postcard-content {
+    text-decoration: none;
+}
+
+.home-intro-title {
+    font-family: var(--title);
+}
+
+
+/* work display cards*/
+.card-width {
+    width: 18rem;
+}
+
+.card-front-img {
+    height: 15rem;
+    object-fit: cover;
+}
+
+.card-content {
+    text-align: left;
+    overflow: hidden;
+}
+
+
+/* work_detail.html */
+.rating {
+    padding: 10px;
+}
+
+.faded {
+    color: rgb(172, 175, 175);
+}
+
+
+/* profile.html */
+.user-dash {
+    margin-top: 5rem;
+}
+
 
 /* Footer */
 footer {
@@ -75,11 +155,16 @@ footer {
     border-top: var(--border);
 }
 
-footer a {
-    color: var(--body);
-}
-
 .social-icons {
     font-size: 1.5rem;
     margin: .5rem .5rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons:hover {
+    transform: scale(1.1);
+}
+
+a.footer-links {
+    color: var(--body);
 }

@@ -17,7 +17,8 @@
             <div class="card-body">
                 {% for rating in user_ratings %}
                 <div>
-                    <p class="font-weight-bold">{{ rating.user }}</p>
+                    <p><strong>For Work:</strong> <a href="{% url 'work_detail' pk=rating.work.pk %}"
+                            class="btn btn-primary">{{ rating.work }}</a></p>
                     <p class="text-muted">{{ rating.created_on }}</p>
                     <p>{{ rating.content | linebreaks }}</p>
                     {% if rating.user == user %}

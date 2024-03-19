@@ -86,12 +86,14 @@
                     <!-- Profile pic -->
                     {% if user.is_authenticated %}
                     <a href="{% url 'profile' %}">
-                        {% if "placeholder" in profile.image.url %}
-                        <img src="{% static 'images/nobody.jpg' %}" alt="placeholder for profile pic"
-                            class="profile-img img-fluid">
+                        {% if user.profile.profile_image %}
+                        {% if "placeholder" in user.profile.profile_image.url %}
+                        <img class="profile-img img-fluid" src="{% static 'images/nobody.jpg' %}"
+                            alt="placeholder for profile pic">
                         {% else %}
-                        <img class="profile-img img-fluid" src="{{ request.user.profile.profile_image.url }}"
+                        <img class="profile-img img-fluid" src="{{ user.profile.profile_image.url }}"
                             alt="user profile pic">
+                        {% endif %}
                         {% endif %}
                     </a>
                     {% endif %}

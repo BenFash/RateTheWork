@@ -80,10 +80,10 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | templates | signup.html/allauth | ![screenshot](documentation/validation/w3c-signup.png) | |
 | templates | logout.html/allauth | ![screenshot](documentation/validation/w3c-signin.png) | |
 | templates | login.html/allauth | ![screenshot](documentation/validation/w3c-signout.png) | |
-| user_dashboard | profile.html | ![screenshot](documentation/validation/w3c-proflie-comments.png) | |
-| user_dashboard | profile_comments.html | ![screenshot](documentation/validation/w3c-proflie-contact.png) | |
-| user_dashboard | profile_contact.html | ![screenshot](documentation/validation/w3c-proflie-likes.png) | |
-| user_dashboard | profile_likes.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| user_dashboard | profile.html | ![screenshot](documentation/validation/w3c-profile.png) | |
+| user_dashboard | profile_comments.html | ![screenshot](documentation/validation/w3c-profile-comments.png) | |
+| user_dashboard | profile_contact.html | ![screenshot](documentation/validation/w3c-profile-contact.png) | |
+| user_dashboard | profile_likes.html | ![screenshot](documentation/validation/w3c-profile-likes.png) | |
 | user_dashboard | profile_picture.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | user_dashboard | profile_posts.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 

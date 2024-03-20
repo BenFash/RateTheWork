@@ -66,13 +66,13 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
 | about | about.html | ![screenshot](documentation/validation/w3c-about.png) | |
-| blog | comment_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | comment_edit.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | work.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | work_create.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | work_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | work_details.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | work_edit.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| blog | comment_delete.html | ![screenshot](documentation/validation/w3c-comment-delete.png) | |
+| blog | comment_edit.html | ![screenshot](documentation/validation/w3c-comment-edit.png) | |
+| blog | work.html | ![screenshot](documentation/validation/w3c-work.png) | |
+| blog | work_create.html | ![screenshot](documentation/validation/w3c-work-create.png) | |
+| blog | work_delete.html | ![screenshot](documentation/validation/w3c-work-delete.png) | |
+| blog | work_details.html | ![screenshot](documentation/validation/w3c-work-details.png) | |
+| blog | work_edit.html | ![screenshot](documentation/validation/w3c-work-edit.png) | |
 | contact | contact.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | home | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | 403.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |

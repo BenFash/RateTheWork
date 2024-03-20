@@ -76,28 +76,11 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | contact | contact.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | home | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | 403.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | authenticate.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_entrance.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_manage.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| templates | base.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | reauthenticate.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | generate.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | index.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | activate_form.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | deactivate_form.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | login.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | authentication_error.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_entrance.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_manage.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | connections.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | login.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | login_cancelled.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | signup.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| templates | logout.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | templates | login.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | login_extra.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | provider_list.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | base_manage.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| templates | usersession_list.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | user_dashboard | profile.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | user_dashboard | profile_comments.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | user_dashboard | profile_contact.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
@@ -115,11 +98,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
-
-| Directory | File | Screenshot | Notes |
-| --- | --- | --- | --- |
-| static | script.js | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+I did not end up using JavaScript however I have left in the project if needed for future features.
 
 ### Python
 
@@ -167,11 +146,9 @@ Consider testing at least 3 different browsers, if available on your system.
 
 Recommended browsers to consider:
 - [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
+- [Firefox](https://www.mozilla.org/firefox/)
 - [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
+
 
 **IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
 

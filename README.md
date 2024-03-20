@@ -257,7 +257,7 @@ Logged In View
   - ![screenshot](documentation/features/work-loggedin.png)
 
 Non Logged in View
-  - ![screenshot](documentation/features/home-search-result.png)
+  - ![screenshot](documentation/features/work-nonlogin.png)
 
 Pagination View
   - ![screenshot](documentation/features/work-paginate.png)

@@ -65,7 +65,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| about | about.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | about.html | ![screenshot](documentation/validation/w3c-about.png) | |
 | blog | comment_delete.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | blog | comment_edit.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | blog | work.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |

@@ -124,9 +124,13 @@ def WorkDelete(request, pk):
     if request.user != work.user:
         messages.error(request, 'You do not have permission.')
         return HttpResponse('Unauthorized', status=403)
-    work.delete()
-    messages.success(request, 'Work Deleted successfully.')
-    return HttpResponseRedirect(reverse('work'))
+
+    if request.method == 'POST':
+        work.delete()
+        messages.success(request, 'Work Deleted successfully.')
+        return HttpResponseRedirect(reverse('work'))
+
+    return render(request, 'blog/work_delete.html', {'work': work})
 
 
 @login_required

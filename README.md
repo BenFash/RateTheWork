@@ -20,12 +20,14 @@ The site is also tailored for members of the public to post works completed for 
 ## UX
 
 
-In designing this project, my primary focus was on achieving a clean and simple design that prioritizes accessibility and ease of use. I aimed to ensure that all essential functions are readily available and easy to navigate, with responsiveness integrated through Bootstrap.
+In designing this project, my primary focus was on achieving a clean and simple design that prioritizes accessibility and ease of use. 
+I aimed to ensure that all essential functions are readily available and easy to navigate, with responsiveness integrated through Bootstrap.
 
 ### Colour Scheme
 
 
-For the colour scheme, I opted for a clean and minimalist approach, with blue as the dominant colour to reflect a sense of professionalism and tranquility. Here are the key colours used throughout the project:
+For the colour scheme, I opted for a clean and minimalist approach, with blue as the dominant colour to reflect a sense of professionalism and tranquility. 
+Here are the key colours used throughout the project:
 
 
 - `#D7CDCC`: off-white color used for the body of website and nav and footer text.
@@ -50,7 +52,8 @@ I've have also used CSS `:root` variables to easily update the global colour sch
 
 To help me with font pairing I used fontpair.co. I settled on the below paring as Oswald's modern and bold style complements Source Sans Pro's clean and neutral design.
 
-    'Oswald' : Oswald is a bold and condensed font with strong geometric shapes, making it ideal for headlines and titles. Its boldness contrasts well with the lighter weight and more open design of Source Sans Pro, creating visual interest,
+    'Oswald' : Oswald is a bold and condensed font with strong geometric shapes, making it ideal for headlines and titles. 
+    Its boldness contrasts well with the lighter weight and more open design of Source Sans Pro, creating visual interest,
     'Source Sans Pro' : Source Sans Pro is designed for optimal readability on screens ideal for text other than headers.
 
 The overall pairing of Oswald and Source Sans Pro fonts provides a harmonious balance of boldness and readability, making them well-suited for my project.
@@ -208,15 +211,45 @@ IMPORTANT: Remember to always include a screenshot of each individual feature!
 
 ### Existing Features
 
-- **{{ YOUR-TITLE-FOR-FEATURE-#1 }}**
+- **{{ Navbar }}**
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+    - The navigation bar offers access to essential features, ensuring a smooth user experience. 
+    Users can effortlessly navigate between the "Home," "Work," "Login," and "Register" options. Once logged in,
+    additional functionalities like "Profile" and "Logout" become available.
 
-![screenshot](documentation/features/feature01.png)
+    - For registered users, the "Profile Picture" feature enhances personalization.
+    In the absence of an uploaded image, a placeholder is displayed, maintaining visual consistency.
+    Clicking on the profile picture or selecting "Profile" directs users to their individual profile page,
+    where they can manage their account. Furthermore, users can easily return to the home page by clicking 
+    on the site logo, facilitating intuitive navigation throughout the platform.
 
-- **{{ YOUR-TITLE-FOR-FEATURE-#2 }}**
+Non logged in user Navbar view
+  - ![screenshot](documentation/features/nav-user.png)
 
-    - Details about this particular feature, including the value to the site, and benefit for the user. Be as detailed as possible!
+Logged in user with uploaded pic Navbar view
+  - ![screenshot](documentation/features/nav-reg-user-upload-pic.png)
+
+Logged in user with placeholder pic Navbar view
+  - ![screenshot](documentation/features/nav-reg-user-no-pic.png)
+
+Mobile Navbar View
+  - ![screenshot](documentation/features/nav-mobile.png)
+
+- **{{ Footer }}**
+
+    - The footer serves as a hub for social engagement and important site information, 
+    fostering a strong connection between users and administrators. Users can explore various
+    social media links used by site administrators, facilitating active interaction and community engagement.
+    Additionally, the footer provides quick access to essential pages such as "About Us" and "Contact Us," 
+    allowing users to gain insights into the platform's mission and easily reach out for assistance or inquiries.
+    Together, these elements create a cohesive user experience, promoting accessibility and transparency within the platform.
+
+Footer View
+  - ![screenshot](documentation/features/footer.png)
+
+Mobile Footer View
+  - ![screenshot](documentation/features/footer-mobile.png)
+
 
 ![screenshot](documentation/features/feature02.png)
 

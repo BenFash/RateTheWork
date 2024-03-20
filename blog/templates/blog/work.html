@@ -8,7 +8,6 @@
 <div class="container text-center">
     <h1 class="p-2">Work</h1>
     {% if user.is_authenticated %}
-    <a href="{% url 'new_work' %}" class="btn btn-primary">Create Work</a>
     <div class="page-intro">
         When sharing your work with our community, it's important to provide clear information to help
         others understand your project. The more detailed and informative your content is, the more engaging
@@ -20,6 +19,7 @@
         and fosters collaboration and inspiration among our members.
         Thank you for sharing your creativity with us!
     </div>
+    <a href="{% url 'new_work' %}" class="btn btn-primary">Create Work</a>
 </div>
 {% endif %}
 <div class="container d-flex flex-row flex-wrap justify-content-center">

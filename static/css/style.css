@@ -112,7 +112,7 @@ img.logo {
 
 /* work display cards*/
 .card-width {
-    width: 18rem;
+    max-width: 15rem;
 }
 
 .card-front-img {

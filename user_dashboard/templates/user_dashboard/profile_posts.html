@@ -11,7 +11,7 @@
 <div class="container d-flex flex-row flex-wrap justify-content-center mt-5">
     {% for w in user_posts %}
     <a href="{% url 'work_detail' pk=w.pk %}" class="work" aria-label="Click to view {{ w.title }}">
-        <div class="card m-3" style="width: 18rem;">
+        <div class="card m-3">
             <img src="{{ w.work_image.url }}" class="card-img-top card-front-img" alt="{{ w.title }}">
             <div class="card-body">
                 <h2 class="card-title">{{ w.title|truncatechars:15 }}</h2>

@@ -1,7 +1,7 @@
 from django.shortcuts import render, reverse, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import messages
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from .forms import ProfileForm, ContactAdminForm
 from blog.models import Work, Rating, Profile
@@ -17,7 +17,6 @@ def ProfileView(request):
     return render(request, 'user_dashboard/profile.html')
 
 
-
 @login_required
 def UploadProfilePic(request):
     """
@@ -26,9 +25,11 @@ def UploadProfilePic(request):
     profile = get_object_or_404(Profile, user=request.user)
 
     if request.method == 'POST':
-        profile_pic_form = ProfileForm(request.POST, request.FILES, instance=profile)
+        profile_pic_form = ProfileForm(request.POST,
+                                    request.FILES,
+                                    instance=profile)
         if profile_pic_form.is_valid():
-            profile = profile_pic_form.save() 
+            profile = profile_pic_form.save()
             messages.success(request, 'Profile picture updated successfully.')
             return HttpResponseRedirect(reverse('profile'))
         else:
@@ -38,7 +39,7 @@ def UploadProfilePic(request):
 
     context = {
         'profile_pic_form': profile_pic_form,
-        'profile': profile, 
+        'profile': profile,
     }
     return render(request, 'user_dashboard/profile_picture.html', context)
 
@@ -49,7 +50,6 @@ def ProfileComments(request):
     View for the profile comments page
     """
     user_ratings = Rating.objects.filter(user=request.user).order_by("-created_on")
-
     context = {
         'user_ratings': user_ratings,
     }
@@ -100,7 +100,6 @@ def ProfileLikes(request):
     except EmptyPage:
         user_likes = paginator.page(paginator.num_pages)
 
-
     context = {
         'user_likes': user_likes,
     }
@@ -114,18 +113,20 @@ def ProfileContact(request):
     View for the contact admin page
     """
     contactadmin = ContactAdmin.objects.all().order_by('-created_at').first()
-    contact_admin_form = ContactAdminForm() 
-    
+    contact_admin_form = ContactAdminForm()
+
     if request.method == 'POST':
         contact_admin_form = ContactAdminForm(request.POST, request.FILES)
         if contact_admin_form.is_valid():
             contact_ad_form = contact_admin_form.save(commit=False)
-            contact_ad_form.user = request.user            
+            contact_ad_form.user = request.user
             contact_ad_form.save()
-            messages.success(request, 'Message sent successfully. Please expect a response within 3 working days.')
+            messages.success(request, 'Message sent successfully.'
+                            'Please expect a response within 3 working days.')
             return HttpResponseRedirect(reverse('profile'))
 
     return render(request, 'user_dashboard/profile_contact.html', {
-        'contactadmin' : contactadmin,
+        'contactadmin': contactadmin,
         'contact_admin_form': contact_admin_form,
     })
+    

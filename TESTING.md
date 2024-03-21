@@ -84,8 +84,8 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | user_dashboard | profile_comments.html | ![screenshot](documentation/validation/w3c-profile-comments.png) | |
 | user_dashboard | profile_contact.html | ![screenshot](documentation/validation/w3c-profile-contact.png) | |
 | user_dashboard | profile_likes.html | ![screenshot](documentation/validation/w3c-profile-likes.png) | |
-| user_dashboard | profile_picture.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| user_dashboard | profile_posts.html | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| user_dashboard | profile_picture.html | ![screenshot](documentation/validation/w3c-profile-picture.png) | |
+| user_dashboard | profile_posts.html | ![screenshot](documentation/validation/w3c-profile-post.png) | |
 
 ### CSS
 
@@ -93,7 +93,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | Directory | File | Screenshot | Notes |
 | --- | --- | --- | --- |
-| static | style.css | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| static | style.css | ![screenshot](documentation/validation/w3c-css.png) | |
 
 ### JavaScript
 
@@ -105,12 +105,10 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | CI URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| about | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| about | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/admin.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
-| blog | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/forms.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
+| about | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/urls.py) | ![screenshot](documentation/validation/linter-about-url.png) | |
+| about | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/about/views.py) | ![screenshot](documentation/validation/linter-about-views.png) | |
+| blog | admin.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/admin.py) | ![screenshot](documentation/validation/linter-blog-admin.png) | |
+| blog | forms.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/forms.py) | ![screenshot](documentation/validation/linter-blog-forms.png) | |
 | blog | models.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/models.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | blog | urls.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/urls.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |
 | blog | views.py | [PEP8 CI](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/BenFash/RateTheWork/main/blog/views.py) | ![screenshot](documentation/validation/path-to-screenshot.png) | |

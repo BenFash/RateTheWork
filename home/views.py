@@ -3,6 +3,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.db.models import Q
 from blog.models import Work
 
+
 def Index(request):
     # Searchbar functionality
     query = request.GET.get('q')
@@ -13,10 +14,9 @@ def Index(request):
             Q(title__icontains=query) |
             Q(content__icontains=query) |
             Q(sub_category__icontains=query) |
-            Q(categories__name__icontains=query) | 
-            Q(user__username__icontains=query) 
+            Q(categories__name__icontains=query) |
+            Q(user__username__icontains=query)
         )
-
 
     # Pagination
     paginator = Paginator(queryset, 3)

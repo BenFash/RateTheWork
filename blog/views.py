@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, reverse
-from django.views.generic import DeleteView, UpdateView , View
+from django.views.generic import DeleteView, UpdateView, View
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -8,13 +8,13 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .models import Work, Rating, Profile
 from .forms import RatingForm, WorkForm
 
-#Create your views here.
+
 def WorkList(request):
     """
     view for the work page
     """
     queryset = Work.objects.filter(approved=True).order_by("-created_on")
-    
+
     items_per_page = 4
 
     paginator = Paginator(queryset, items_per_page)
@@ -46,7 +46,7 @@ def CreateWork(request):
             work.user = request.user
             work.suggested_price = 0
             work.save()
-            messages.success(request, 'Work created successfully. Waiting for approval.')
+            messages.success(request, 'Work created successfully.Waiting approval.')
             return HttpResponseRedirect(reverse('work'))
     else:
         work_form = WorkForm()
@@ -62,7 +62,7 @@ def WorkDetail(request, pk):
     """
     queryset = Work.objects.filter(approved=True)
     work = get_object_or_404(queryset, pk=pk)
-    
+
     ratings = Rating.objects.filter(approved=True).order_by("-created_on")
     liked = False
     if request.user.is_authenticated and work.likes.filter(id=request.user.id).exists():
@@ -148,7 +148,8 @@ def WorkEdit(request, pk):
             work = work_form.save(commit=False)
             work.user = request.user
             work.save()
-            messages.success(request, 'Work updated successfully. Waiting for approval.')
+            messages.success(request, 'Work updated successfully. '
+                                    'Waiting for approval.')
             return HttpResponseRedirect(reverse('work'))
     else:
         work_form = WorkForm(instance=work)
@@ -181,12 +182,9 @@ class CommentEdit(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 
     def test_func(self):
         return self.request.user == self.get_object().user
-    # function to see the comment as not approved
+
     def form_valid(self, form):
-        form.instance.approved = False 
-        messages.success(self.request, 'Comment updated successfully. Waiting for approval.')
+        form.instance.approved = False
+        messages.success(self.request, 'Comment updated successfully. '
+                                        'Waiting for approval.')
         return super().form_valid(form)
-
-
-
-

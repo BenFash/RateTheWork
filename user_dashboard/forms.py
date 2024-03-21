@@ -12,4 +12,4 @@ class ProfileForm(forms.ModelForm):
 class ContactAdminForm(forms.ModelForm):
     class Meta:
         model = ContactAdmin
-        fields = ('subject','email', 'message')
+        fields = ('subject', 'email', 'message')

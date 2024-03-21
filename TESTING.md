@@ -95,10 +95,6 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --- | --- | --- | --- |
 | static | style.css | ![screenshot](documentation/validation/w3c-css.png) | |
 
-### JavaScript
-
-I did not end up using JavaScript however I have left in the project if needed for future features.
-
 ### Python
 
 I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com) to validate all of my Python files.

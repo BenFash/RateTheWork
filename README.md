@@ -52,7 +52,7 @@ I've have also used CSS `:root` variables to easily update the global colour sch
 
 To help me with font pairing I used fontpair.co. I settled on the below paring as Oswald's modern and bold style complements Source Sans Pro's clean and neutral design.
 
-    'Oswald' : Oswald is a bold and condensed font with strong geometric shapes, making it ideal for headlines and titles. 
+'Oswald' : Oswald is a bold and condensed font with strong geometric shapes, making it ideal for headlines and titles. 
     Its boldness contrasts well with the lighter weight and more open design of Source Sans Pro, creating visual interest,
     'Source Sans Pro' : Source Sans Pro is designed for optimal readability on screens ideal for text other than headers.
 
@@ -176,7 +176,7 @@ Contact Us
 
 ### Existing Features
 
-- **{{ Navbar }}**
+- **Navbar**
 
     - The navigation bar offers access to essential features, ensuring a smooth user experience. 
     Users can effortlessly navigate between the "Home," "Work," "Login," and "Register" options. Once logged in,
@@ -204,7 +204,7 @@ Mobile Navbar View
   - ![screenshot](documentation/features/nav-mobile.png)
 </details>
 
-- **{{ Footer }}**
+- **Footer**
 
     - The footer serves as a hub for social engagement and important site information, 
     fostering a strong connection between users and administrators. Users can explore various
@@ -223,7 +223,7 @@ Mobile Footer View
   - ![screenshot](documentation/features/footer-mobile.png)
 </details>
 
-- **{{ Search Function }}**
+- **Search Function**
 
     - There is a search function on the home page to allow users to easily filter through work. 
     The work then paginates on the home page below the page intro. The filters for the search are;
@@ -243,7 +243,7 @@ Search Pagination
 
 </details>
 
-- **{{ Works Page }}**
+- **Works Page**
 
     - Works page serves as a centralized hub for your posts, displaying them in a user-friendly format with
     the latest creations showcased first. Pagination facilitates easy navigation through multiple posts. 
@@ -264,7 +264,7 @@ Pagination View
 
 </details>
 
-- **{{ Work Details Page }}**
+- **Work Details Page**
 
     - Work details page offers a comprehensive view of each post, including a photo, description, categories, and a comments section. 
     Registered users have the ability to interact further by leaving likes, comments, and suggesting a price for the work. 
@@ -287,7 +287,7 @@ Non Logged In View
 
 </details>
 
-- **{{ Profile Page }}**
+- **Profile Page**
 
     -  Overall, the profile page offers a one-stop destination for users to customize their experience, review their contributions, 
     explore their activity, and connect with administrative support when needed. Only available to signed up users
@@ -314,7 +314,7 @@ Contact Admin - allows user to send a message to admin if needed.
   - ![screenshot](documentation/features/profile-contact.png)
 </details>
 
-- **{{ About Us Page }}**
+- **About Us Page**
 
     - About us page just provides users with a brief websites mission. All users can view this page
 
@@ -325,7 +325,7 @@ Contact Admin - allows user to send a message to admin if needed.
 
 </details>
 
-- **{{ Contact Us Page }}**
+- **Contact Us Page**
 
     - Contact us page allows non registered users to contact admin if needed 
 
@@ -339,14 +339,14 @@ Contact Admin - allows user to send a message to admin if needed.
 
 ### Future Features
 
-- {{ Search by Category }}
+- Search by Category
     - Implement a search functionality that allows users to filter works by category. 
     This feature enhances user experience by enabling them to find relevant content more efficiently 
-- {{ Direct Messaging Service }}
+- Direct Messaging Service
     - Introduce a direct messaging service to facilitate communication between community members. 
     Users can reach out to each other for quotes or collaborations after viewing each other's work. 
     This enhances networking and collaboration within the community.
-- {{ Company and User Home Pages }}
+- Company and User Home Pages
     - Create dedicated home pages for companies and users to showcase their works and relevant information. 
     This feature provides a centralized platform for users to present their portfolio, 
     allowing for greater visibility and engagement.
@@ -373,7 +373,7 @@ and provide a comprehensive platform for showcasing and connecting with others w
 
 ## Database Design
 
-- (https://lucid.app/) used to create my EDR
+- https://lucid.app/ used to create my EDR
 
 ![screenshot](documentation/other/EDR_diagram.png)
 
@@ -437,6 +437,19 @@ To obtain your own Cloudinary API key, create an account and log in.
 - Optional: *edit your assigned cloud name to something more memorable*.
 - On your Cloudinary Dashboard, you can copy your **API Environment Variable**.
 - Be sure to remove the `CLOUDINARY_URL=` as part of the API **value**; this is the **key**.
+
+### ElephantSQL Database
+
+This project uses [ElephantSQL](https://www.elephantsql.com) for the PostgreSQL Database.
+
+To obtain your own Postgres Database, sign-up with your GitHub account, then follow these steps:
+
+- Click **Create New Instance** to start a new database.
+- Provide a name (this is commonly the name of the project: RateTheWork).
+- Select the **Tiny Turtle (Free)** plan.
+- You can leave the **Tags** blank.
+- Select the **Region** and **Data Center** closest to you.
+- Once created, click on the new database name, where you can view the database URL and Password.
 
 ### Heroku Deployment
 
@@ -553,12 +566,18 @@ You can fork this repository by using the following steps:
 2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
 3. Once clicked, you should now have a copy of the original repository in your own GitHub account!
 
+### Local VS Deployment
+
+The Django Admin dashboard appears slightly different on the local (VSCode) version when compared to the deployed (Heroku) application.
+
+Otherwise, everything else is behaving as expected.
+
 ## Credits
 
 I extend my gratitude to Code Institute for their invaluable support throughout the creation of this project. 
-My experience with Django, acquired through their program, notably during the development of a blog site, provided me with profound insights and inspiration for my final project. Here's the repo to the blog site (https://github.com/BenFash/django_project)
+My experience with Django, acquired through their program, notably during the development of a blog site, provided me with profound insights and inspiration for my final project. Here's the repo to the blog site [GitHub Repository](https://github.com/BenFash/django_project)
 
-Prior to this project, I engaged in a preparatory exercise by following a walkthrough to construct a recipe site led by "Dee Mc." This endeavor not only honed my skills but also served as a precursor to my project's development. Here are the links to the video tutorial (https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) and the corresponding repository on (https://github.com/BenFash/Django-recipe-test)
+Prior to this project, I engaged in a preparatory exercise by following a walkthrough to construct a recipe site led by "Dee Mc." This endeavor not only honed my skills but also served as a precursor to my project's development. Here are the links to the video tutorial [Youtube](https://www.youtube.com/watch?v=sBjbty691eI&list=PLXuTq6OsqZjbCSfiLNb2f1FOs8viArjWy) and the corresponding repository on [GitHub Repository](https://github.com/BenFash/Django-recipe-test)
 
 ### Content
 

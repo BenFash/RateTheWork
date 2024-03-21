@@ -63,7 +63,7 @@ def WorkDetail(request, pk):
     queryset = Work.objects.filter(approved=True)
     work = get_object_or_404(queryset, pk=pk)
 
-    ratings = Rating.objects.filter(approved=True).order_by("-created_on")
+    ratings = Rating.objects.filter(approved=True, work=work).order_by("-created_on")
     liked = False
     if request.user.is_authenticated and work.likes.filter(id=request.user.id).exists():
         liked = True

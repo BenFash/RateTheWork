@@ -65,12 +65,11 @@
         <div class="col-md-8">
             <div class="card mb-4 mt-3">
                 <h3 class="card-header">
-                    Comments
+                    Ratings
                     <i class="far fa-comment"></i>
                 </h3>
                 <div class="card-body">
                     {% for rating in ratings %}
-                    {% if rating.work == work %}
                     <div class="{% if not rating.approved %}d-none{% endif %}">
                         <p><strong>Username:</strong> {{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
@@ -83,7 +82,8 @@
                         </div>
                         {% endif %}
                     </div>
-                    {% endif %}
+                    {% empty %}
+                    <p class="text-danger">No comments yet</p>
                     {% endfor %}
                 </div>
             </div>
@@ -95,7 +95,7 @@
                 <div class="card-body">
                     {% if commented %}
                     <div class="alert alert-success" role="alert">
-                        Your comment is awaiting approval
+                        Your rating is awaiting approval
                     </div>
                     {% else %}
 
@@ -118,7 +118,7 @@
                     <p class="card-text mt-1">Total Likes: {{ work.likes.all.count }}</p>
                     <!-- End likes area-->
                     <h3 class="card-title mt-2">
-                        Leave a comment
+                        Leave a rating
                         <i class="fa-regular fa-comment"></i>
                     </h3>
                     <hr>

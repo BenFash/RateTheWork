@@ -130,39 +130,17 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Browser Compatibility
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
+I've tested my deployed project on the main 3 browsers to check for compatibility issues.
 
-Use this space to discuss testing the live/deployed site on various browsers.
-
-Consider testing at least 3 different browsers, if available on your system.
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox](https://www.mozilla.org/firefox/)
-- [Safari](https://support.apple.com/downloads/safari)
-
-
-**IMPORTANT**: You must provide screenshots of the tested browsers, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time.
-Some of these are paid services, but some are free.
-If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-Sample browser testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-I've tested my deployed project on multiple browsers to check for compatibility issues.
-
-| Browser | Home | Work | About | Contact | Signin | Signout | Work Details | Comment Edit | Comment Delete | Profile | Profile Picture | Your Comments | Your Posts | Your Likes | Profile Contact | Notes |
+| Browser | Home | Work | About | Contact | Signin | Signout | Work Details | Comment Edit | Comment Delete | Profile | Profile Picture | Your Comments | Your Posts | Your Likes | Profile Contact | Register | Work Delete | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-work.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-signin.png) | ![screenshot](documentation/browsers/browser-chrome-logout.png) | ![screenshot](documentation/browsers/browser-chrome-workdetails.png) ![screenshot](documentation/browsers/browser-chrome-workdetails2.png) | ![screenshot](documentation/browsers/browser-chrome-commentedit.png) | ![screenshot](documentation/browsers/browser-chrome-commentdelete.png) | ![screenshot](documentation/browsers/browser-chrome-profile.png) | ![screenshot](documentation/browsers/browser-chrome-profilepic.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-chrome-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-chrome-profilecontact.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-etc.png) | Works as expected |
-| Edge | ![screenshot](documentation/browsers/browser-edge-home.png) | ![screenshot](documentation/browsers/browser-edge-about.png) | ![screenshot](documentation/browsers/browser-chrome-edge.png) | ![screenshot](documentation/browsers/browser-edge-etc.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-work.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-signin.png) | ![screenshot](documentation/browsers/browser-chrome-logout.png) | ![screenshot](documentation/browsers/browser-chrome-workdetails.png) ![screenshot](documentation/browsers/browser-chrome-workdetails2.png) | ![screenshot](documentation/browsers/browser-chrome-commentedit.png) | ![screenshot](documentation/browsers/browser-chrome-commentdelete.png) | ![screenshot](documentation/browsers/browser-chrome-profile.png) | ![screenshot](documentation/browsers/browser-chrome-profilepic.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-chrome-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-chrome-profilecontact.png) | ![screenshot](documentation/browsers/browser-chrome-register.png) | ![screenshot](documentation/browsers/browser-chrome-workdelete.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-work.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-signin.png) | ![screenshot](documentation/browsers/browser-firefox-logout.png) | ![screenshot](documentation/browsers/browser-firefox-workdetails.png) ![screenshot](documentation/browsers/browser-firefox-workdetails2.png) | ![screenshot](documentation/browsers/browser-firefox-commentedit.png) | ![screenshot](documentation/browsers/browser-firefox-commentdelete.png) | ![screenshot](documentation/browsers/browser-firefox-profile.png) | ![screenshot](documentation/browsers/browser-firefox-profilepic.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-firefox-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-firefox-profilecontact.png) | ![screenshot](documentation/browsers/browser-firefox-register.png) | ![screenshot](documentation/browsers/browser-firefox-workdelete.png) | Works as expected |
+
+
 | Safari | ![screenshot](documentation/browsers/browser-safari-home.png) | ![screenshot](documentation/browsers/browser-safari-about.png) | ![screenshot](documentation/browsers/browser-safari-contact.png) | ![screenshot](documentation/browsers/browser-safari-etc.png) | Minor CSS differences |
-| Brave | ![screenshot](documentation/browsers/browser-brave-home.png) | ![screenshot](documentation/browsers/browser-brave-about.png) | ![screenshot](documentation/browsers/browser-brave-contact.png) | ![screenshot](documentation/browsers/browser-brave-etc.png) | Works as expected |
-| Opera | ![screenshot](documentation/browsers/browser-opera-home.png) | ![screenshot](documentation/browsers/browser-opera-about.png) | ![screenshot](documentation/browsers/browser-opera-contact.png) | ![screenshot](documentation/browsers/browser-opera-etc.png) | Minor differences |
-| repeat for any other tested browsers | x | x | x | x | x |
+
+
 
 ## Responsiveness
 
@@ -189,16 +167,12 @@ Sample responsiveness testing documentation:
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 
-| Device | Home | About | Contact | etc | Notes |
-| --- | --- | --- | --- | --- | --- |
+| Device | Home | Work | About | Contact | Signin | Signout | Work Details | Comment Edit | Comment Delete | Profile | Profile Picture | Your Comments | Your Posts | Your Likes | Profile Contact | Register | Work Delete | Notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Mobile (DevTools) | ![screenshot](documentation/responsiveness/responsive-mobile-home.png) | ![screenshot](documentation/responsiveness/responsive-mobile-about.png) | ![screenshot](documentation/responsiveness/responsive-mobile-contact.png) | ![screenshot](documentation/responsiveness/responsive-mobile-etc.png) | Works as expected |
+
 | Tablet (DevTools) | ![screenshot](documentation/responsiveness/responsive-tablet-home.png) | ![screenshot](documentation/responsiveness/responsive-tablet-about.png) | ![screenshot](documentation/responsiveness/responsive-tablet-contact.png) | ![screenshot](documentation/responsiveness/responsive-tablet-etc.png) | Works as expected |
 | Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-about.png) | ![screenshot](documentation/responsiveness/responsive-desktop-contact.png) | ![screenshot](documentation/responsiveness/responsive-desktop-etc.png) | Works as expected |
-| XL Monitor | ![screenshot](documentation/responsiveness/responsive-xl-home.png) | ![screenshot](documentation/responsiveness/responsive-xl-about.png) | ![screenshot](documentation/responsiveness/responsive-xl-contact.png) | ![screenshot](documentation/responsiveness/responsive-xl-etc.png) | Scaling starts to have minor issues |
-| 4K Monitor | ![screenshot](documentation/responsiveness/responsive-4k-home.png) | ![screenshot](documentation/responsiveness/responsive-4k-about.png) | ![screenshot](documentation/responsiveness/responsive-4k-contact.png) | ![screenshot](documentation/responsiveness/responsive-4k-etc.png) | Noticeable scaling issues |
-| Google Pixel 7 Pro | ![screenshot](documentation/responsiveness/responsive-pixel-home.png) | ![screenshot](documentation/responsiveness/responsive-pixel-about.png) | ![screenshot](documentation/responsiveness/responsive-pixel-contact.png) | ![screenshot](documentation/responsiveness/responsive-pixel-etc.png) | Works as expected |
-| iPhone 14 | ![screenshot](documentation/responsiveness/responsive-iphone-home.png) | ![screenshot](documentation/responsiveness/responsive-iphone-about.png) | ![screenshot](documentation/responsiveness/responsive-iphone-contact.png) | ![screenshot](documentation/responsiveness/responsive-iphone-etc.png) | Works as expected |
-| repeat for any other tested browsers | x | x | x | x | x |
 
 ## Lighthouse Audit
 
@@ -415,7 +389,7 @@ Make sure to include any necessary steps you've implemented to fix the bug(s) as
 
     - To fix this, I _____________________.
 
-- Python `E501 line too long` (93 > 79 characters)
+- Python `E501 line too long` 
 
     ![screenshot](documentation/bugs/bug04.png)
 

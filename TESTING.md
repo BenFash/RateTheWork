@@ -3,61 +3,7 @@
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-In this section, you need to convince the assessors that you have conducted enough testing to legitimately believe that the site works well.
-Essentially, in this part, you should go over all of your project's features, and ensure that they all work as intended,
-with the project providing an easy and straightforward way for the users to achieve their goals.
-
-Feature-by-Feature Testing:
-
-Go through each feature of your portfolio site and detail the testing process for each.
-
-Explain the functionality and demonstrate how it aligns with the intended purpose. This could include:
-
-- Navigation: Ensuring smooth transitions between pages, links directing to the correct destinations.
-- Responsive Design: Checking for compatibility across various devices and screen sizes.
-- Portfolio Display: Verifying that projects are properly showcased with accurate descriptions, images, and links.
-- Contact Form: Testing the form submission process, ensuring the user receives a confirmation, and you receive the message.
-
-User Experience Testing:
-
-- Usability Testing: Have users (or simulated users) interact with the site and provide feedback. Document any issues encountered and the resolutions implemented.
-- Accessibility Testing: Confirm compliance with accessibility standards (e.g., screen reader compatibility, proper alt text for images, keyboard navigation).
-
-Compatibility Testing:
-
-- Browser Compatibility: Testing on different browsers (Chrome, Firefox, Safari, Edge, etc.) to ensure consistent performance.
-- Device Compatibility: Ensuring functionality across various devices (desktops, laptops, tablets, and mobile phones).
-- Performance Testing (optional):
-	- Speed and Load Testing: Tools like PageSpeed Insights or GTmetrix to check page load times and optimize where necessary.
-	- Scalability Testing: Assess how the site handles increased traffic or usage.
-
-Regression Testing:
-
-After implementing fixes or updates, ensure that previous features and functionalities still work as intended. This prevents new changes from breaking existing features.
-
-Documentation and Logs:
-
-Maintain records of testing procedures, results, and any bugs encountered along with their resolutions. This helps demonstrate a systematic approach to testing and problem-solving.
-User Feedback Incorporation:
-
-If applicable, mention how user feedback has been taken into account and implemented to enhance the user experience.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 ## Code Validation
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use the space to discuss code validation for any of your own code files (where applicable).
-You are not required to validate external libraries/frameworks, such as imported Bootstrap, Materialize, Font Awesome, etc.
-
-**IMPORTANT**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Always validate the live site pages, not your local code. There could be subtle/hidden differences.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ### HTML
 
@@ -130,9 +76,9 @@ I've tested my deployed project on the main 3 browsers to check for compatibilit
 
 | Browser | Home | Work | About | Contact | Signin | Signout | Work Details | Comment Edit | Comment Delete | Profile | Profile Picture | Your Comments | Your Posts | Your Likes | Profile Contact | Register | Work Delete | Work Edit | Notes |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-work.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-signin.png) | ![screenshot](documentation/browsers/browser-chrome-logout.png) | ![screenshot](documentation/browsers/browser-chrome-workdetails.png) ![screenshot](documentation/browsers/browser-chrome-workdetails2.png) | ![screenshot](documentation/browsers/browser-chrome-commentedit.png) | ![screenshot](documentation/browsers/browser-chrome-commentdelete.png) | ![screenshot](documentation/browsers/browser-chrome-profile.png) | ![screenshot](documentation/browsers/browser-chrome-profilepic.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-chrome-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-chrome-profilecontact.png) | ![screenshot](documentation/browsers/browser-chrome-register.png) | ![screenshot](documentation/browsers/browser-chrome-workdelete.png) | Works as expected |
-| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-work.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-signin.png) | ![screenshot](documentation/browsers/browser-firefox-logout.png) | ![screenshot](documentation/browsers/browser-firefox-workdetails.png) ![screenshot](documentation/browsers/browser-firefox-workdetails2.png) | ![screenshot](documentation/browsers/browser-firefox-commentedit.png) | ![screenshot](documentation/browsers/browser-firefox-commentdelete.png) | ![screenshot](documentation/browsers/browser-firefox-profile.png) | ![screenshot](documentation/browsers/browser-firefox-profilepic.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-firefox-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-firefox-profilecontact.png) | ![screenshot](documentation/browsers/browser-firefox-register.png) | ![screenshot](documentation/browsers/browser-firefox-workdelete.png) | Works as expected |
-| Edge | ![screenshot](documentation/browsers/browser-edge-home.png) | ![screenshot](documentation/browsers/browser-edge-work.png) | ![screenshot](documentation/browsers/browser-edge-about.png) | ![screenshot](documentation/browsers/browser-edge-contact.png) | ![screenshot](documentation/browsers/browser-edge-signin.png) | ![screenshot](documentation/browsers/browser-edge-logout.png) | ![screenshot](documentation/browsers/browser-edge-workdetails.png) ![screenshot](documentation/browsers/browser-edge-workdetails2.png) | ![screenshot](documentation/browsers/browser-edge-commemtedit.png) | ![screenshot](documentation/browsers/browser-edge-commentdelete.png) | ![screenshot](documentation/browsers/browser-edge-profile.png) | ![screenshot](documentation/browsers/browser-edge-profilepic.png) | ![screenshot](documentation/browsers/browser-edge-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-edge-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-edge-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-edge-profilecontact.png) | ![screenshot](documentation/browsers/browser-edge-register.png) | ![screenshot](documentation/browsers/browser-edge-workdelete.png) | ![screenshot](documentation/browsers/browser-edge-register.png) | Works as expected |
+| Chrome | ![screenshot](documentation/browsers/browser-chrome-home.png) | ![screenshot](documentation/browsers/browser-chrome-work.png) | ![screenshot](documentation/browsers/browser-chrome-about.png) | ![screenshot](documentation/browsers/browser-chrome-contact.png) | ![screenshot](documentation/browsers/browser-chrome-signin.png) | ![screenshot](documentation/browsers/browser-chrome-logout.png) | ![screenshot](documentation/browsers/browser-chrome-workdetails.png) ![screenshot](documentation/browsers/browser-chrome-workdetails2.png) | ![screenshot](documentation/browsers/browser-chrome-commentedit.png) | ![screenshot](documentation/browsers/browser-chrome-commentdelete.png) | ![screenshot](documentation/browsers/browser-chrome-profile.png) | ![screenshot](documentation/browsers/browser-chrome-profilepic.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-chrome-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-chrome-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-chrome-profilecontact.png) | ![screenshot](documentation/browsers/browser-chrome-register.png) | ![screenshot](documentation/browsers/browser-chrome-workdelete.png) | ![screenshot](documentation/browsers/browser-chrome-workedit.png) | Works as expected |
+| Firefox | ![screenshot](documentation/browsers/browser-firefox-home.png) | ![screenshot](documentation/browsers/browser-firefox-work.png) | ![screenshot](documentation/browsers/browser-firefox-about.png) | ![screenshot](documentation/browsers/browser-firefox-contact.png) | ![screenshot](documentation/browsers/browser-firefox-signin.png) | ![screenshot](documentation/browsers/browser-firefox-logout.png) | ![screenshot](documentation/browsers/browser-firefox-workdetails.png) ![screenshot](documentation/browsers/browser-firefox-workdetails2.png) | ![screenshot](documentation/browsers/browser-firefox-commentedit.png) | ![screenshot](documentation/browsers/browser-firefox-commentdelete.png) | ![screenshot](documentation/browsers/browser-firefox-profile.png) | ![screenshot](documentation/browsers/browser-firefox-profilepic.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-firefox-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-firefox-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-firefox-profilecontact.png) | ![screenshot](documentation/browsers/browser-firefox-register.png) | ![screenshot](documentation/browsers/browser-firefox-workdelete.png)| ![screenshot](documentation/browsers/browser-firefox-workedit.png) | Works as expected |
+| Edge | ![screenshot](documentation/browsers/browser-edge-home.png) | ![screenshot](documentation/browsers/browser-edge-work.png) | ![screenshot](documentation/browsers/browser-edge-about.png) | ![screenshot](documentation/browsers/browser-edge-contact.png) | ![screenshot](documentation/browsers/browser-edge-signin.png) | ![screenshot](documentation/browsers/browser-edge-logout.png) | ![screenshot](documentation/browsers/browser-edge-workdetails.png) ![screenshot](documentation/browsers/browser-edge-workdetails2.png) | ![screenshot](documentation/browsers/browser-edge-commemtedit.png) | ![screenshot](documentation/browsers/browser-edge-commentdelete.png) | ![screenshot](documentation/browsers/browser-edge-profile.png) | ![screenshot](documentation/browsers/browser-edge-profilepic.png) | ![screenshot](documentation/browsers/browser-edge-profileyourcomments.png) | ![screenshot](documentation/browsers/browser-edge-profileyourposts.png)  | ![screenshot](documentation/browsers/browser-edge-profileyourlikes.png) | ![screenshot](documentation/browsers/browser-edge-profilecontact.png) | ![screenshot](documentation/browsers/browser-edge-register.png) | ![screenshot](documentation/browsers/browser-edge-workdelete.png) | ![screenshot](documentation/browsers/browser-edge-workedit.png) | Works as expected |
 
 ## Responsiveness
 
@@ -142,8 +88,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Mobile (DevTools) | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/mobile-work.png) ![screenshot](documentation/responsiveness/mobile-work2.png) ![screenshot](documentation/responsiveness/mobile-work3.png) ![screenshot](documentation/responsiveness/mobile-work4.png) | ![screenshot](documentation/responsiveness/mobile-about.png) ![screenshot](documentation/responsiveness/mobile-about2.png) | ![screenshot](documentation/responsiveness/mobile-contact.png) ![screenshot](documentation/responsiveness/mobile-contact2.png) | ![screenshot](documentation/responsiveness/mobile-signin.png) | ![screenshot](documentation/responsiveness/mobile-signout.png) | ![screenshot](documentation/responsiveness/mobile-workdetails.png) ![screenshot](documentation/responsiveness/mobile-workdetails2.png) ![screenshot](documentation/responsiveness/mobile-workdetails3.png) ![screenshot](documentation/responsiveness/mobile-workdetails4.png) | ![screenshot](documentation/responsiveness/mobile-commentedit.png) | ![screenshot](documentation/responsiveness/mobile-commentdelete.png) | ![screenshot](documentation/responsiveness/mobile-profile.png) ![screenshot](documentation/responsiveness/mobile-profile2.png) | ![screenshot](documentation/responsiveness/mobile-profilepic.png) | ![screenshot](documentation/responsiveness/mobile-profileyourcomments.png) ![screenshot](documentation/responsiveness/mobile-profileyourcomments2.png) | ![screenshot](documentation/responsiveness/mobile-profileyourposts.png) ![screenshot](documentation/responsiveness/mobile-profileyourposts2.png) | ![screenshot](documentation/responsiveness/mobile-profileyourlikes.png) ![screenshot](documentation/responsiveness/mobile-profileyourlikes2.png) ![screenshot](documentation/responsiveness/mobile-profileyourlikes3.png) | ![screenshot](documentation/responsiveness/mobile-profilecontact.png) | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/mobile-workdelete.png) | ![screenshot](documentation/responsiveness/mobile-workedit.png) ![screenshot](documentation/responsiveness/mobile-workedit2.png) | Works as expected |
 | Tablet (DevTools) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/tablet-work.png) ![screenshot](documentation/responsiveness/tablet-work2.png) | ![screenshot](documentation/responsiveness/tablet-about.png) | ![screenshot](documentation/responsiveness/tablet-contact.png) | ![screenshot](documentation/responsiveness/tablet-signin.png) | ![screenshot](documentation/responsiveness/tablet-signout.png) | ![screenshot](documentation/responsiveness/tablet-workdetails.png) ![screenshot](documentation/responsiveness/tablet-workdetails2.png) | ![screenshot](documentation/responsiveness/tablet-commentedit.png) | ![screenshot](documentation/responsiveness/tablet-commentdelete.png) | ![screenshot](documentation/responsiveness/tablet-profile.png) | ![screenshot](documentation/responsiveness/tablet-profilepic.png) | ![screenshot](documentation/responsiveness/tablet-profileyourcomments.png) | ![screenshot](documentation/responsiveness/tablet-profileyourposts.png) | ![screenshot](documentation/responsiveness/tablet-profileyourlikes.png) ![screenshot](documentation/responsiveness/tablet-profileyourlikes2.png) | ![screenshot](documentation/responsiveness/tablet-profilecontact.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/tablet-workdelete.png) | ![screenshot](documentation/responsiveness/tablet-workedit.png) | Works as expected, edit button on your comments page sits close to "for work" line |
-
-| Desktop | ![screenshot](documentation/responsiveness/responsive-desktop-home.png) | ![screenshot](documentation/responsiveness/responsive-desktop-about.png) | ![screenshot](documentation/responsiveness/responsive-desktop-contact.png) | ![screenshot](documentation/responsiveness/responsive-desktop-etc.png) | Works as expected / Edit button on comments sit close to "for work" line |
+| Desktop (DevTools) | ![screenshot](documentation/responsiveness/desktop-home.png) | ![screenshot](documentation/responsiveness/desktop-work.png) | ![screenshot](documentation/responsiveness/desktop-about.png) | ![screenshot](documentation/responsiveness/desktop-contact.png) | ![screenshot](documentation/responsiveness/desktop-signin.png) | ![screenshot](documentation/responsiveness/desktop-signout.png) | ![screenshot](documentation/responsiveness/desktop-workdetails.png) ![screenshot](documentation/responsiveness/desktop-workdetails2.png) | ![screenshot](documentation/responsiveness/desktop-commentedit.png) | ![screenshot](documentation/responsiveness/desktop-commentdelete.png) | ![screenshot](documentation/responsiveness/desktop-profile.png) | ![screenshot](documentation/responsiveness/desktop-profilepic.png) | ![screenshot](documentation/responsiveness/desktop-profileyourcomments.png) | ![screenshot](documentation/responsiveness/desktop-profileyourposts.png) | ![screenshot](documentation/responsiveness/desktop-profileyourlikes.png) | ![screenshot](documentation/responsiveness/desktop-profilecontact.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | ![screenshot](documentation/responsiveness/tablet-workdelete.png) | ![screenshot](documentation/responsiveness/desktop-workedit.png) ![screenshot](documentation/responsiveness/desktop-workedit2.png) | Works as expected |
 
 ## Lighthouse Audit
 
@@ -169,9 +114,21 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
 | Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
-| Gallery | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Slow response time due to large images |
-| x | x | x | repeat for any other tested pages/sizes |
+| Work | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
+| About | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Contact | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Work Details | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Comment Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Comment Delete | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Profile | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Profile Picture | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Your Comments | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Your Posts | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Your Likes | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Profile Contact | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Register | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Work Delete | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Work Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
 
 ## Defensive Programming
 
@@ -202,32 +159,6 @@ or uses CRUD functionality for data manipulation on a database.
 Make sure to include the `required` attribute on any form-fields that should be mandatory.
 Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
 
-You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable.
-Ideally, tests cases should focus on each individual section of every page on the website.
-Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine,
-consider documenting tests on each element of the page
-(ie. button clicks, input box validation, navigation links, etc.) by testing them in their happy flow,
-and also the bad/exception flow, mentioning the expected and observed results,
-and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | User Action | Expected Result | Pass/Fail | Comments |
@@ -235,42 +166,68 @@ Defensive programming was manually tested with the below user acceptance testing
 | Home | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
-| Gallery | | | | |
+| Work | | | | |
 | | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
 | | Load gallery images | All images load as expected | Pass | |
-| Contact | | | | |
+| About | | | | |
 | | Click on Contact link in navbar | Redirection to Contact page | Pass | |
 | | Enter first/last name | Field will accept freeform text | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter message in textarea | Field will accept freeform text | Pass | |
 | | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
-| Sign Up | | | | |
+| Contact | | | | |
 | | Click on Sign Up button | Redirection to Sign Up page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password (twice) | Field will only accept password format | Pass | |
 | | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
 | | Confirm email | Redirects user to blank Sign In page | Pass | |
-| Log In | | | | |
+| Signin | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
 | | Enter valid password | Field will only accept password format | Pass | |
 | | Click Login button | Redirects user to home page | Pass | |
-| Log Out | | | | |
+| Signout | | | | |
 | | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Profile | | | | |
+| Work Details  | | | | |
 | | Click on Profile button | User will be redirected to the Profile page | Pass | |
 | | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
 | | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
 | | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| repeat for all remaining pages | x | x | x | x |
+| Comment Edit | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Comment Delete | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Profile | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Profile Picture | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Your Comments | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Your Posts | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Your Likes | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Profile Contact | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Register | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Work Delete | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| Work Edit | | | | |
+| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click Confirm Logout button | Redirects user to home page | Pass | |
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Repeat for all other tests, as applicable to your own site.
-The aforementioned tests are just an example of a few different project scenarios.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 ## User Story Testing
 

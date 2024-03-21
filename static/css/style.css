@@ -60,9 +60,6 @@ a.nav-link {
     transition: all 0.3s ease;
 }
 
-a.nav-link:hover {
-    transform: scale(1.1);
-}
 
 img.logo {
     width: 6rem;
@@ -164,4 +161,10 @@ footer {
 
 a.footer-links {
     color: var(--body);
+}
+
+@media (min-width: 992px) {
+    a.nav-link:hover {
+        transform: scale(1.1);
+    }
 }

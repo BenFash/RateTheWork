@@ -7,7 +7,6 @@
     --body: #D7CDCC;
     --navfooter: #034078;
     --font-color: #001F54;
-    --buttons: #1282A2;
 
     /* Utils */
     --smal-box-shadow: 1px -1px 7px 0 #00000061;
@@ -43,6 +42,10 @@ main {
     background-color: var(--body);
 }
 
+a {
+    text-decoration: none;
+}
+
 .active {
     font-weight: 700;
     border-bottom: 1px solid var(--body);
@@ -61,9 +64,6 @@ a.nav-link {
     transition: all 0.3s ease;
 }
 
-a.nav-link:hover {
-    transform: scale(1.1);
-}
 
 img.logo {
     width: 6rem;
@@ -112,9 +112,6 @@ img.logo {
 
 
 /* work display cards*/
-.card-width {
-    width: 18rem;
-}
 
 .card-front-img {
     height: 15rem;
@@ -167,4 +164,11 @@ footer {
 
 a.footer-links {
     color: var(--body);
+}
+
+/* Media queries */
+@media (min-width: 992px) {
+    a.nav-link:hover {
+        transform: scale(1.1);
+    }
 }

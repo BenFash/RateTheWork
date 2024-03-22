@@ -78,7 +78,7 @@ The overall pairing of Oswald and Source Sans Pro fonts provides a harmonious ba
 
 - As a registered user I would like to be able to create a new post so that i can showcase my work/project in order to receive feedback from the community.
 - As a registered user I would like to comment on posts made by other users so that i can provide feedback and engage with the community.
-- As a registered user I would like to to be able to like/dislike posts made by other users so that i can provide quick feedback.
+- As a registered user I would like to to be able to like posts made by other users so that i can provide quick feedback.
 - As a registered user I would like to be able to view my own posts so that i can keep track of my contributions to the platform.
 - As a registered user I would like to be able to edit and delete my comments so that i can amend them if i have made a mistake.
 - As a registered user I would like to be able to edit and delete my posts so that i can edit and amend if needed.

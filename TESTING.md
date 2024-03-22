@@ -3,6 +3,10 @@
 > [!NOTE]  
 > Return back to the [README.md](README.md) file.
 
+## Real users
+Brseaford24 - Partner - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
+
+rydy91@gmail - Friend - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
 ## Code Validation
 
 ### HTML
@@ -226,7 +230,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Left Subject field empty | Required field prevents submit | Pass | |
 | | Left Email field empty | Required field prevents submit also requires email formatting inputted | Pass | |
 | | Left Message field empty | Required field prevents submit | Pass | |
-| | Click Submit button | Redirects user to proflie page | Pass | |
+| | Click Submit button | Redirects user to profile page | Pass | |
 | | Log into admin panel to view | Form is available to read | Pass | |
 | | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Register | | | | |
@@ -245,102 +249,30 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Left Catagories field empty | Required field prevents submit | Pass | |
 | | Left Content field empty | Required field prevents submit | Pass | |
 | | Left Sub-category field empty | Form submits as expected | Pass | |
-| | Checked Admin to approve | Post showed approved when should go back to unapproved | Pass | work.approved = False now added to view to prevent this |
-
+| | Checked Admin to approve | Post showed approved, post should go back to unapproved for monitoring | Pass | work.approved = False now added to view to prevent this |
 
 ## User Story Testing
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Testing user stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **features** should already align with the **user stories**,
-so this should as simple as creating a table with the user story, matching with the re-used screenshot
-from the respective feature.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feat/feature01.png) |
-| As a user I would like to be able to search for posts based on keywords or categories, so that I can find relevant content. | ![screenshot](documentation/feat/feature01.png) |
-| As a user I would like to be able to view posts so that I can see works completed/received by the community. | ![screenshot](documentation/feat/feature01.png) |
-| As a user I would like to be able to contact admin so that I can provide feedback and suggestions. | ![screenshot](documentation/fea/feature01.png) |
-| As a user I would like to know that i am at the correct site so that I can be ensured im engaging with the correct community. | ![screenshot](documentation/feat/feature01.png) |
-| As a user I would like to sign up to the site so that I can make posts and comments. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to be able to create a new post so that i can showcase my work/project in order to receive feedback from the community. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to comment on posts made by other users so that i can provide feedback and engage with the community. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to to be able to like/dislike posts made by other users so that i can provide quick feedback. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to be able to view my own posts so that i can keep track of my contributions to the platform. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to be able to edit and delete my comments so that i can amend them if i have made a mistake. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to be able to edit and delete my posts so that i can edit and amend if needed. | ![screenshot](documentation/feat/feature01.png) |
-| As a registered user I would like to upload a profile picture so that i can add personality to my account. | ![screenshot](documentation/feat/feature01.png) |
-| As a site administrator I would like to be able to approve posts and comments so that i can maintain a positive and respectful community environment. | ![screenshot](documentation/feat/feature01.png) |
-| As site administrator I would like to have a about page so that i can give users more info about the site. | ![screenshot](documentation/feat/feature01.png) |
+| As a user I would like to be able to search for posts based on keywords or categories, so that I can find relevant content. | ![screenshot](documentation/feat/search.png) |
+| As a user I would like to be able to view posts so that I can see works completed/received by the community. | ![screenshot](documentation/feat/viewpost.png) |
+| As a user I would like to be able to contact admin so that I can provide feedback and suggestions. | ![screenshot](documentation/feat/usercontact.png) |
+| As a user I would like to know that I am at the correct site so that I can be ensured im engaging with the correct community. | ![screenshot](documentation/feat/landingpage.png) |
+| As a user I would like to sign up to the site so that I can make posts and comments. | ![screenshot](documentation/feat/register.png) |
+| As a registered user I would like to be able to create a new post so that i can showcase my work/project in order to receive feedback from the community. | ![screenshot](documentation/feat/create-work.png) ![screenshot](documentation/feat/create-workform.png) |
+| As a registered user I would like to comment on posts made by other users so that i can provide feedback and engage with the community. | ![screenshot](documentation/feat/comment-like.png) |
+| As a registered user I would like to to be able to like posts made by other users so that i can provide quick feedback. | ![screenshot](documentation/feat/comment-like.png) |
+| As a registered user I would like to be able to view my own posts so that i can keep track of my contributions to the platform. | ![screenshot](documentation/feat/yourposts.png) |
+| As a registered user I would like to be able to edit and delete my comments so that i can amend them if i have made a mistake. | ![screenshot](documentation/feat/comment-editdelete.png) |
+| As a registered user I would like to be able to edit and delete my posts so that i can edit and amend if needed. | ![screenshot](documentation/feat/post-editdelete.png) |
+| As a registered user I would like to upload a profile picture so that i can add personality to my account. | ![screenshot](documentation/feat/uploadpic.png) |
+| As a site administrator I would like to be able to approve posts and comments so that i can maintain a positive and respectful community environment. | ![screenshot](documentation/feat/approve-post.png) ![screenshot](documentation/feat/approve-comment.png) |
+| As site administrator I would like to have a about page so that i can give users more info about the site. | ![screenshot](documentation/feat/about.png) |
 
 ## Bugs
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-This section is primarily used for JavaScript and Python applications,
-but feel free to use this section to document any HTML/CSS bugs you might run into.
-
-It's very important to document any bugs you've discovered while developing the project.
-Make sure to include any necessary steps you've implemented to fix the bug(s) as well.
-
-**PRO TIP**: screenshots of bugs are extremely helpful, and go a long way!
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- JS Uncaught ReferenceError: `foobar` is undefined/not defined
-
-    ![screenshot](documentation/bugs/bug01.png)
-
-    - To fix this, I _____________________.
-
-- JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).
-
-    ![screenshot](documentation/bugs/bug02.png)
-
-    - To fix this, I _____________________.
-
-- Python `'ModuleNotFoundError'` when trying to import module from imported package
-
-    ![screenshot](documentation/bugs/bug03.png)
-
-    - To fix this, I _____________________.
-
-- Django `TemplateDoesNotExist` at /appname/path appname/template_name.html
-
-    ![screenshot](documentation/bugs/bug04.png)
-
-    - To fix this, I _____________________.
-
-- Python `E501 line too long` 
-
-    ![screenshot](documentation/bugs/bug04.png)
-
-    - To fix this, I _____________________.
-
 ### GitHub **Issues**
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-An improved way to manage bugs is to use the built-in **Issues** tracker on your GitHub repository.
-To access your Issues, click on the "Issues" tab at the top of your repository.
-Alternatively, use this link: https://github.com/BenFash/RateTheWork/issues
-
-If using the Issues tracker for your bug management, you can simplify the documentation process.
-Issues allow you to directly paste screenshots into the issue without having to first save the screenshot locally,
-then uploading into your project.
-
-You can add labels to your issues (`bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s).
-
-Once you've sorted the issue, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following format:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 **Fixed Bugs**
 
@@ -350,9 +282,14 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/BenFas
 
 | Bug | Status |
 | --- | --- |
-| [JS Uncaught ReferenceError: `foobar` is undefined/not defined](https://github.com/BenFash/RateTheWork/issues/1) | Closed |
-| [Python `'ModuleNotFoundError'` when trying to import module from imported package](https://github.com/BenFash/RateTheWork/issues/2) | Closed |
-| [Django `TemplateDoesNotExist` at /appname/path appname/template_name.html](https://github.com/BenFash/RateTheWork/issues/3) | Closed |
+| [Django - Auto like on posts](https://github.com/BenFash/RateTheWork/issues/17) | Closed |
+| [Django - Auto suggested price fill on work create](https://github.com/BenFash/RateTheWork/issues/18) | Closed |
+| [Django - Paginate not working on landing page(with search function)](https://github.com/BenFash/RateTheWork/issues/20) | Closed |
+| [Django - Profile picture not loading](https://github.com/BenFash/RateTheWork/issues/19) | Closed |
+| [Django - Fixing user being able to change their already uploaded profile picture](https://github.com/BenFash/RateTheWork/issues/21) | Closed |
+| [Django - Brute forcing URLS](https://github.com/BenFash/RateTheWork/issues/22) | Closed |
+| [Django - Post did not go not approved after edit](https://github.com/BenFash/RateTheWork/issues/23) | Closed |
+| [CSS - Your comments edit and delete button](https://github.com/BenFash/RateTheWork/issues/24) | Closed |
 
 **Open Issues**
 
@@ -361,51 +298,7 @@ All previously closed/fixed bugs can be tracked [here](https://github.com/BenFas
 
 Any remaining open issues can be tracked [here](https://github.com/BenFash/RateTheWork/issues).
 
-| Bug | Status |
-| --- | --- |
-| [JS `'let'` or `'const'` or `'template literal syntax'` or `'arrow function syntax (=>)'` is available in ES6 (use `'esversion: 11'`) or Mozilla JS extensions (use moz).](https://github.com/BenFash/RateTheWork/issues/4) | Open |
-| [Python `E501 line too long` (93 > 79 characters)](https://github.com/BenFash/RateTheWork/issues/5) | Open |
-
 ## Unfixed Bugs
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-You will need to mention unfixed bugs and why they were not fixed.
-This section should include shortcomings of the frameworks or technologies used.
-Although time can be a big variable to consider, paucity of time and difficulty understanding
-implementation is not a valid reason to leave bugs unfixed.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here.
-It's better to be honest and list them, because if it's not documented and an assessor finds the issue,
-they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-Some examples:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
-- On devices smaller than 375px, the page starts to have `overflow-x` scrolling.
-
-    ![screenshot](documentation/bugs/unfixed-bug01.png)
-
-    - Attempted fix: I tried to add additional media queries to handle this, but things started becoming too small to read.
-
-- For PP3, when using a helper `clear()` function, any text above the height of the terminal does not clear, and remains when you scroll up.
-
-    ![screenshot](documentation/bugs/unfixed-bug02.png)
-
-    - Attempted fix: I tried to adjust the terminal size, but it only resizes the actual terminal, not the allowable area for text.
-
-- When validating HTML with a semantic `section` element, the validator warns about lacking a header `h2-h6`. This is acceptable.
-
-    ![screenshot](documentation/bugs/unfixed-bug03.png)
-
-    - Attempted fix: this is a known warning and acceptable, and my section doesn't require a header since it's dynamically added via JS.
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-If you legitimately cannot find any unfixed bugs or warnings, then use the following sentence:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
 
 > [!NOTE]  
 > There are no remaining bugs that I am aware of.

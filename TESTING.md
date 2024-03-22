@@ -111,15 +111,15 @@ Sample Lighthouse testing documentation:
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-| Page | Mobile | Desktop | Notes |
-| --- | --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Some minor warnings |
-| Work | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Some minor warnings |
-| About | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Contact | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Work Details | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Comment Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Comment Delete | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Page | Mobile | Notes |
+| --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Score: 90/95/100/92 |
+| Work | ![screenshot](documentation/lighthouse/lighthouse-work.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Score: 85/100/78/92 with user uploaded pictures loading times increased |
+| About | ![screenshot](documentation/lighthouse/lighthouse-about.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Score: 89/100/100/92 |
+| Contact | ![screenshot](documentation/lighthouse/lighthouse-contact.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Score: 89/100/100/92 |
+| Work Details | ![screenshot](documentation/lighthouse/lighthouse-workdetails-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | score: 74/100/78/92 |
+| Comment Edit (unable to run) | ![screenshot](documentation/lighthouse/lighthouse-commentedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | unable to run - "Lighthouse returned error: ERRORED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)" |
+| Comment Delete (unable to run) | ![screenshot](documentation/lighthouse/lighthouse-commentdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | unable to run - "Lighthouse returned error: ERRORED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)" |
 | Profile | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
 | Profile Picture | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
 | Your Comments | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
@@ -166,21 +166,29 @@ Defensive programming was manually tested with the below user acceptance testing
 | Home | | | | |
 | | Click on Logo | Redirection to Home page | Pass | |
 | | Click on Home link in navbar | Redirection to Home page | Pass | |
+| | Click on Work link in navbar | Redirection to Work page | Pass | |
+| | Click on Login link in navbar | Redirection to Login page | Pass | |
+| | Click on Register link in navbar | Redirection to Register page | Pass | |
+| | Click on Logout link in navbar | Redirection to Logout page | Pass | |
+| | Click on Profile link in navbar | Redirection to Profile page | Pass | |
+| | Click on Profile picture in navbar | Redirection to Profile page | Pass | |
+| | Click on Search in body | Presents results | Pass | |
+| | Click on Pagination next in body | Presents next page | Pass | searched "hi" |
+| | Click on Pagination previous in body | Presents previous page | Pass | |
+| | Click on Social links in footer | All redirect to relevant sites  | Pass | |
+| | Click on About us in footer | All redirect to About us page  | Pass | |
+| | Click on Contact us in footer | All redirect to Contact us page  | Pass | |
 | Work | | | | |
-| | Click on Gallery link in navbar | Redirection to Gallery page | Pass | |
-| | Load gallery images | All images load as expected | Pass | |
-| About | | | | |
-| | Click on Contact link in navbar | Redirection to Contact page | Pass | |
-| | Enter first/last name | Field will accept freeform text | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter message in textarea | Field will accept freeform text | Pass | |
-| | Click the Submit button | Redirects user to form-dump | Pass | User must click 'Back' button to return |
+| | Click on Create Work link in body| Redirection to Create Work page | Pass | |
+| | Click work cards | All cards load as expected | Pass | |
+| | Click on Pagination next in body | Presents next page | Pass | |
+| | Click on Pagination previous in body | Presents previous page | Pass | |
 | Contact | | | | |
-| | Click on Sign Up button | Redirection to Sign Up page | Pass | |
-| | Enter valid email address | Field will only accept email address format | Pass | |
-| | Enter valid password (twice) | Field will only accept password format | Pass | |
-| | Click on Sign Up button | Asks user to confirm email page | Pass | Email sent to user |
-| | Confirm email | Redirects user to blank Sign In page | Pass | |
+| | Left Name field empty | Required field prevents submit | Pass | |
+| | Left Subject field empty | Required field prevents submit | Pass | |
+| | Left Email field empty | Required field prevents submit also requires email formatting inputted | Pass | |
+| | Left Message field empty | Required field prevents submit | Pass | |
+| | Click Submit | Form sends off to admin | Pass | |
 | Signin | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |

@@ -92,43 +92,26 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports.
-Avoid testing the local version (especially if developing in Gitpod), as this can have knock-on effects of performance.
-
-If you don't have Lighthouse in your Developer Tools,
-it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Don't just test the home page (unless it's a single-page application).
-Make sure to test the Lighthouse Audit results for all of your pages.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-Sample Lighthouse testing documentation:
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-END OF NOTES (to be deleted)
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
 
-| Page | Mobile | Notes |
-| --- | --- | --- |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | Score: 90/95/100/92 |
-| Work | ![screenshot](documentation/lighthouse/lighthouse-work.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Score: 85/100/78/92 with user uploaded pictures loading times increased |
-| About | ![screenshot](documentation/lighthouse/lighthouse-about.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Score: 89/100/100/92 |
-| Contact | ![screenshot](documentation/lighthouse/lighthouse-contact.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Score: 89/100/100/92 |
-| Work Details | ![screenshot](documentation/lighthouse/lighthouse-workdetails-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | score: 74/100/78/92 |
-| Comment Edit (unable to run) | ![screenshot](documentation/lighthouse/lighthouse-commentedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | unable to run - "Lighthouse returned error: ERRORED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)" |
-| Comment Delete (unable to run) | ![screenshot](documentation/lighthouse/lighthouse-commentdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | unable to run - "Lighthouse returned error: ERRORED_DOCUMENT_REQUEST. Lighthouse was unable to reliably load the page you requested. Make sure you are testing the correct URL and that the server is properly responding to all requests. (Status code: 404)" |
-| Profile | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Profile Picture | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Your Comments | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Your Posts | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Your Likes | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Profile Contact | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Register | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Work Delete | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
-| Work Edit | ![screenshot](documentation/lighthouse/lighthouse-gallery-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-gallery-desktop.png) | Some minor warnings |
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-home-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-home-desktop.png) | |
+| Work | ![screenshot](documentation/lighthouse/lighthouse-work-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | Longer loading times on performance to be expected due to large amount of user uploaded images |
+| About | ![screenshot](documentation/lighthouse/lighthouse-about-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-about-desktop.png) | |
+| Contact | ![screenshot](documentation/lighthouse/lighthouse-contact-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-contact-desktop.png) | |
+| Work Details | ![screenshot](documentation/lighthouse/lighthouse-workdetails-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workdetails-desktop.png) | |
+| Comment Edit | ![screenshot](documentation/lighthouse/lighthouse-commentedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-commentedit-desktop.png) | |
+| Comment Delete | ![screenshot](documentation/lighthouse/lighthouse-commentdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-commentdelete-desktop.png) | |
+| Profile | ![screenshot](documentation/lighthouse/lighthouse-profile-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profile-desktop.png) | |
+| Profile Picture | ![screenshot](documentation/lighthouse/lighthouse-profilepic-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profilepic-desktop.png) | |
+| Your Comments | ![screenshot](documentation/lighthouse/lighthouse-profileyourcomments-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourcomments-desktop.png) | |
+| Your Posts | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-desktop.png) | |
+| Your Likes | ![screenshot](documentation/lighthouse/lighthouse-profileyourlikes-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourlikes-desktop.png) | |
+| Profile Contact | ![screenshot](documentation/lighthouse/lighthouse-profilecontact-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profilecontact-desktop.png) | |
+| Register | ![screenshot](documentation/lighthouse/lighthouse-register-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-register-desktop.png) | |
+| Work Delete | ![screenshot](documentation/lighthouse/lighthouse-workdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workdelete-desktop.png) | |
+| Work Edit | ![screenshot](documentation/lighthouse/lighthouse-workedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workedit-desktop.png) | |
 
 ## Defensive Programming
 
@@ -179,16 +162,32 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on About us in footer | All redirect to About us page  | Pass | |
 | | Click on Contact us in footer | All redirect to Contact us page  | Pass | |
 | Work | | | | |
+| | Click on Work link | Redirection to Work page | Pass | |
 | | Click on Create Work link in body| Redirection to Create Work page | Pass | |
 | | Click work cards | All cards load as expected | Pass | |
 | | Click on Pagination next in body | Presents next page | Pass | |
 | | Click on Pagination previous in body | Presents previous page | Pass | |
+| | Logged out to see if create work button displayed | Did not | Pass | |
+| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Error message presented 
+| Create Work | | | | |
+| | Click on Create Work link | Redirection to Create Work page | Pass | |
+| | Left Title field empty  | Required field prevents submit | Pass | |
+| | Left Image field empty | Required field prevents submit | Pass | |
+| | Left Catagories field empty | Required field prevents submit | Pass | |
+| | Left Content field empty | Required field prevents submit | Pass | |
+| | Left Sub-category field empty | Form submits as expected | Pass | |
+| | Checked Admin to approve | Post did not show until admin approved | Pass | |
+| | Click work cards | All cards load as expected | Pass | |
+| | Click on Pagination next in body | Presents next page | Pass | |
+| | Brute forcing the URL to get to this page whilst not signed in | User should be given an error | Pass | Error message presented 
 | Contact | | | | |
+| | Click on Contact Us link | Redirection to Contact Us page | Pass 
 | | Left Name field empty | Required field prevents submit | Pass | |
 | | Left Subject field empty | Required field prevents submit | Pass | |
 | | Left Email field empty | Required field prevents submit also requires email formatting inputted | Pass | |
 | | Left Message field empty | Required field prevents submit | Pass | |
 | | Click Submit | Form sends off to admin | Pass | |
+| | Checked admin panel to see if received | Received | Pass | |
 | Signin | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
@@ -198,43 +197,82 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
 | Work Details  | | | | |
-| | Click on Profile button | User will be redirected to the Profile page | Pass | |
-| | Click on the Edit button | User will be redirected to the edit profile page | Pass | |
-| | Click on the My Orders link | User will be redirected to the My Orders page | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Redirects user back to own profile |
-| Comment Edit | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
+| | Click on any of the work cards from work page | Redirection relevant work | Pass | |
+| | Non logged in user | Like and leave rating section not available | Pass | |
+| | Logged in user | Like and leave rating section available | Pass | |
+| | Logged in as user of work - Click on the Work Edit button. User redirected to the edit work page | Pass | |
+| | Logged in as user of work- Click on the Work Delete button. User redirected to the delete work page | Pass | |
+| | Logged in as another user | Edit work button not available | Pass | |
+| | Logged in as another user  | Delete work button not available | Pass | |
+| | Click leave a like button | Can leave a like and remove your like. Like total on page and card front update | Pass | |
+| | Click leave a rating - with out content | Form does not submit due to required field| Pass | |
+| | Click leave a rating - with out Suggested price | Form submit | Pass | |
+| | Click leave a rating | Once submit comment does not show in rating until approval of admin | Pass | |
+| | Log into admin panel to approve | Once approved comments shows in work details page ratings | Pass | |
+| | Logged in as another user | Edit rating button not available | Pass | |
+| | Logged in as another user | Delete rating button not available | Pass | |
+| | Logged in as user of rating | Delete rating button available. User redirected to the delete work page | Pass | |
+| | Logged in as user of rating| Delete rating button available. User redirected to the delete work page | Pass | |
+| Ratings Edit | | | | |
+| | Click Ratings edit button | Redirects user to edit rating page | Pass | |
 | | Click Confirm Logout button | Redirects user to home page | Pass | |
-| Comment Delete | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Edit Comment rating - with out content | Form does not submit due to required field| Pass | |
+| | Click leave a rating - with out Suggested price | Form submits | Pass | |
+| | Log into admin panel to approve | Once approved comments shows in work details page ratings | Pass | |
+| Ratings Delete | | | | |
+| | Click Delete comment button | Redirects user to comment delete page | Pass | Confirms delete first |
+| | Click Confirm delete button | Redirects user to work page | Pass | |
 | Profile | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Non logged in user | Button in nav not available | Pass |  |
+| | Click Profile button | Redirects user to profile page | Pass |  |
+| | Non logged in user brute forcing the URL to get into profile section | User should be given an error | Pass | Error message presented |
 | Profile Picture | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Profile picture button from profile page | Redirects user to profile picture page | Pass | 
+| | Left image field empty | form submits | Pass | Placeholder profile picture shows in nav |
+| | Left user type field empty | Form does not submit due to required field | Pass |  |
+| | Insert image into field | form submits, redirect to profile page | Pass | Profile picture shows in nav |
+| | Select clear current and submit | form submits, redirect to profile page | Pass | Placeholder profile picture shows in nav |
+| | Select user type | Dropdown selection as expected | Pass | |
+| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Your Comments | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Your comments button from profile page | Redirects user to your comments page | Pass | shows only users comments |
+| | Click For works button | Redirects user to relevant work comment is for | Pass | |
+| | Click For edit button | Redirects user to edit comment page for the relevant comment | Pass | |
+| | Click For delete button | Redirects user to delete comment page for the relevant comment | Pass | |
+| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Your Posts | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Your posts button from profile page | Redirects user to your posts page | Pass | shows only users posts |
+| | Click any of the posts cards | Redirects user to relevant work details page | Pass | |
+| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Your Likes | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Your likes button from profile page | Redirects user to your likes page | Pass | shows only users liked posts |
+| | Click any of the posts cards | Redirects user to relevant work details page | Pass | |
+| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Profile Contact | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Contact Admin button from profile page | Redirects user to contact admin page | Pass | |
+| | Left Subject field empty | Required field prevents submit | Pass | |
+| | Left Email field empty | Required field prevents submit also requires email formatting inputted | Pass | |
+| | Left Message field empty | Required field prevents submit | Pass | |
+| | Click Submit button | Redirects user to proflie page | Pass | |
+| | Log into admin panel to view | Form is available to read | Pass | |
+| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
 | Register | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Register button | Redirects user to register page | Pass |  |
+| | Left Email field empty | Required field prevents submit | Pass | |
+| | Left Username field empty | Required field prevents submit | Pass | |
+| | Left Password fields empty | Required field prevents submit | Pass | |
+| | Click Sign up button | Creates account and redirects to home | Pass | |
 | Work Delete | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Delete button | Redirects user to Delete Work page | Pass | Confirms delete first |
+| | Click Confirm Delete button | Redirects user to work page and deletes relevant work | Pass | |
 | Work Edit | | | | |
-| | Click Logout button | Redirects user to logout page | Pass | Confirms logout first |
-| | Click Confirm Logout button | Redirects user to home page | Pass | |
+| | Click Work edit button | Redirects user to work edit page | Pass | Confirms edit first |
+| | Left Title field empty  | Required field prevents submit | Pass | |
+| | Left Image field empty | Required field prevents submit | Pass | |
+| | Left Catagories field empty | Required field prevents submit | Pass | |
+| | Left Content field empty | Required field prevents submit | Pass | |
+| | Left Sub-category field empty | Form submits as expected | Pass | |
+| | Checked Admin to approve | Post showed approved when should go back to unapproved | Pass | work.approved = False now added to view to prevent this |
 
 
 ## User Story Testing

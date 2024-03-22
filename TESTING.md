@@ -92,7 +92,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 
 ## Lighthouse Audit
 
-I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+I've tested my deployed project using the Lighthouse Audit tool. Desktop scored better than mobile
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
@@ -106,7 +106,7 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Profile | ![screenshot](documentation/lighthouse/lighthouse-profile-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profile-desktop.png) | |
 | Profile Picture | ![screenshot](documentation/lighthouse/lighthouse-profilepic-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profilepic-desktop.png) | |
 | Your Comments | ![screenshot](documentation/lighthouse/lighthouse-profileyourcomments-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourcomments-desktop.png) | |
-| Your Posts | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-desktop.png) | |
+| Your Posts | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourposts-desktop.png) | Longer loading times on performance to be expected due to large amount of user uploaded images |
 | Your Likes | ![screenshot](documentation/lighthouse/lighthouse-profileyourlikes-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profileyourlikes-desktop.png) | |
 | Profile Contact | ![screenshot](documentation/lighthouse/lighthouse-profilecontact-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-profilecontact-desktop.png) | |
 | Register | ![screenshot](documentation/lighthouse/lighthouse-register-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-register-desktop.png) | |
@@ -114,33 +114,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 | Work Edit | ![screenshot](documentation/lighthouse/lighthouse-workedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workedit-desktop.png) | |
 
 ## Defensive Programming
-
-🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑-START OF NOTES (to be deleted)
-
-Defensive programming (defensive design) is extremely important!
-
-When building projects that accept user inputs or forms, you should always test the level of security for each.
-Examples of this could include (not limited to):
-
-Forms:
-- Users cannot submit an empty form
-- Users must enter valid email addresses
-
-PP3 (Python-only):
-- Users must enter a valid letter/word/string when prompted
-- Users must choose from a specific list only
-
-MS3 (Flask) | MS4/PP4/PP5 (Django):
-- Users cannot brute-force a URL to navigate to a restricted page
-- Users cannot perform CRUD functionality while logged-out
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers
-
-You'll want to test all functionality on your application, whether it's a standard form,
-or uses CRUD functionality for data manipulation on a database.
-Make sure to include the `required` attribute on any form-fields that should be mandatory.
-Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser).
 
 Defensive programming was manually tested with the below user acceptance testing:
 
@@ -289,16 +262,21 @@ from the respective feature.
 
 | User Story | Screenshot |
 | --- | --- |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature01.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature02.png) |
-| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature03.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature04.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature05.png) |
-| As a returning site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/features/feature06.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature07.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature08.png) |
-| As a site administrator, I should be able to ____________, so that I can ____________. | ![screenshot](documentation/features/feature09.png) |
-| repeat for all remaining user stories | x |
+| As a new site user, I would like to ____________, so that I can ____________. | ![screenshot](documentation/feat/feature01.png) |
+| As a user I would like to be able to search for posts based on keywords or categories, so that I can find relevant content. | ![screenshot](documentation/feat/feature01.png) |
+| As a user I would like to be able to view posts so that I can see works completed/received by the community. | ![screenshot](documentation/feat/feature01.png) |
+| As a user I would like to be able to contact admin so that I can provide feedback and suggestions. | ![screenshot](documentation/fea/feature01.png) |
+| As a user I would like to know that i am at the correct site so that I can be ensured im engaging with the correct community. | ![screenshot](documentation/feat/feature01.png) |
+| As a user I would like to sign up to the site so that I can make posts and comments. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to be able to create a new post so that i can showcase my work/project in order to receive feedback from the community. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to comment on posts made by other users so that i can provide feedback and engage with the community. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to to be able to like/dislike posts made by other users so that i can provide quick feedback. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to be able to view my own posts so that i can keep track of my contributions to the platform. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to be able to edit and delete my comments so that i can amend them if i have made a mistake. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to be able to edit and delete my posts so that i can edit and amend if needed. | ![screenshot](documentation/feat/feature01.png) |
+| As a registered user I would like to upload a profile picture so that i can add personality to my account. | ![screenshot](documentation/feat/feature01.png) |
+| As a site administrator I would like to be able to approve posts and comments so that i can maintain a positive and respectful community environment. | ![screenshot](documentation/feat/feature01.png) |
+| As site administrator I would like to have a about page so that i can give users more info about the site. | ![screenshot](documentation/feat/feature01.png) |
 
 ## Bugs
 

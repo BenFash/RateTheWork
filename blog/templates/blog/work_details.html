@@ -72,7 +72,7 @@
                     <div class="{% if not rating.approved %}d-none{% endif %}">
                         <p><strong>Username:</strong> {{ rating.user }}</p>
                         <p class="text-muted">{{ rating.created_on }}</p>
-                        <p>{{ rating.content | linebreaks }}</p>
+                        {{ rating.content | linebreaks }}
                         <p><strong>Suggested Price:</strong> £{{ rating.suggested_price }}</p>
                         {% if user.is_authenticated and rating.user == user %}
                         <div class="text-center">

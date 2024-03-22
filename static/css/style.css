@@ -42,6 +42,10 @@ main {
     background-color: var(--body);
 }
 
+a {
+    text-decoration: none;
+}
+
 .active {
     font-weight: 700;
     border-bottom: 1px solid var(--body);
@@ -162,6 +166,7 @@ a.footer-links {
     color: var(--body);
 }
 
+/* Media queries */
 @media (min-width: 992px) {
     a.nav-link:hover {
         transform: scale(1.1);

@@ -147,6 +147,7 @@ def WorkEdit(request, pk):
         if work_form.is_valid():
             work = work_form.save(commit=False)
             work.user = request.user
+            work.approved = False
             work.save()
             messages.success(request, 'Work updated successfully. '
                                     'Waiting for approval.')

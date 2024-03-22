@@ -336,6 +336,17 @@ Contact Admin - allows user to send a message to admin if needed.
 
 </details>
 
+- **404 Page**
+
+    - Advises page not found with button that redirects home.
+
+<details>
+<summary> Click here to see the 404 view</summary> 
+
+  - ![screenshot](documentation/features/404.png)
+
+</details>
+
 
 ### Future Features
 

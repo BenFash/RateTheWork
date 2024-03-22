@@ -30,6 +30,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | templates | signup.html/allauth | ![screenshot](documentation/validation/w3c-signup.png) | Known errors with allauth register page |
 | templates | logout.html/allauth | ![screenshot](documentation/validation/w3c-signin.png) | |
 | templates | login.html/allauth | ![screenshot](documentation/validation/w3c-signout.png) | |
+| templates | 404.html | ![screenshot](documentation/validation/w3c-404.png) | |
 | user_dashboard | profile.html | ![screenshot](documentation/validation/w3c-profile.png) | |
 | user_dashboard | profile_comments.html | ![screenshot](documentation/validation/w3c-profile-comments.png) | |
 | user_dashboard | profile_contact.html | ![screenshot](documentation/validation/w3c-profile-contact.png) | |
@@ -116,6 +117,7 @@ I've tested my deployed project using the Lighthouse Audit tool. Desktop scored 
 | Register | ![screenshot](documentation/lighthouse/lighthouse-register-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-register-desktop.png) | |
 | Work Delete | ![screenshot](documentation/lighthouse/lighthouse-workdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workdelete-desktop.png) | |
 | Work Edit | ![screenshot](documentation/lighthouse/lighthouse-workedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workedit-desktop.png) | |
+| 404 | ![screenshot](documentation/lighthouse/lighthouse-404-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-404-desktop.png) | |
 
 ## Defensive Programming
 
@@ -145,7 +147,6 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click on Pagination next in body | Presents next page | Pass | |
 | | Click on Pagination previous in body | Presents previous page | Pass | |
 | | Logged out to see if create work button displayed | Did not | Pass | |
-| | Brute forcing the URL to get to another user's profile | User should be given an error | Pass | Error message presented 
 | Create Work | | | | |
 | | Click on Create Work link | Redirection to Create Work page | Pass | |
 | | Left Title field empty  | Required field prevents submit | Pass | |
@@ -156,7 +157,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Checked Admin to approve | Post did not show until admin approved | Pass | |
 | | Click work cards | All cards load as expected | Pass | |
 | | Click on Pagination next in body | Presents next page | Pass | |
-| | Brute forcing the URL to get to this page whilst not signed in | User should be given an error | Pass | Error message presented 
+| | Brute forcing the URL to get to this page whilst not signed in | Redirected to 404 | Pass | |
 | Contact | | | | |
 | | Click on Contact Us link | Redirection to Contact Us page | Pass 
 | | Left Name field empty | Required field prevents submit | Pass | |
@@ -202,7 +203,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | Profile | | | | |
 | | Non logged in user | Button in nav not available | Pass |  |
 | | Click Profile button | Redirects user to profile page | Pass |  |
-| | Non logged in user brute forcing the URL to get into profile section | User should be given an error | Pass | Error message presented |
+| | Non logged in user brute forcing the URL to get into profile section | Redirected to 404 page | Pass | |
 | Profile Picture | | | | |
 | | Click Profile picture button from profile page | Redirects user to profile picture page | Pass | 
 | | Left image field empty | form submits | Pass | Placeholder profile picture shows in nav |
@@ -210,21 +211,21 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Insert image into field | form submits, redirect to profile page | Pass | Profile picture shows in nav |
 | | Select clear current and submit | form submits, redirect to profile page | Pass | Placeholder profile picture shows in nav |
 | | Select user type | Dropdown selection as expected | Pass | |
-| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
+| | Non logged in user brute forcing the URL to get into profile section | User should be given an error | Pass | Error message presented |
 | Your Comments | | | | |
 | | Click Your comments button from profile page | Redirects user to your comments page | Pass | shows only users comments |
 | | Click For works button | Redirects user to relevant work comment is for | Pass | |
 | | Click For edit button | Redirects user to edit comment page for the relevant comment | Pass | |
 | | Click For delete button | Redirects user to delete comment page for the relevant comment | Pass | |
-| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
+| | Non logged in user should not see leave like and comment section | User cannot see this area | Pass | |
 | Your Posts | | | | |
 | | Click Your posts button from profile page | Redirects user to your posts page | Pass | shows only users posts |
 | | Click any of the posts cards | Redirects user to relevant work details page | Pass | |
-| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
+| | Non logged in user brute forcing the URL to get into profile  section | Redirected to 404 page | Pass | |
 | Your Likes | | | | |
 | | Click Your likes button from profile page | Redirects user to your likes page | Pass | shows only users liked posts |
 | | Click any of the posts cards | Redirects user to relevant work details page | Pass | |
-| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
+| | Non logged in user brute forcing the URL to get into profile  section | Redirected to 404 page | Pass | |
 | Profile Contact | | | | |
 | | Click Contact Admin button from profile page | Redirects user to contact admin page | Pass | |
 | | Left Subject field empty | Required field prevents submit | Pass | |
@@ -232,7 +233,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Left Message field empty | Required field prevents submit | Pass | |
 | | Click Submit button | Redirects user to profile page | Pass | |
 | | Log into admin panel to view | Form is available to read | Pass | |
-| | Non logged in user brute forcing the URL to get into profile picture section | User should be given an error | Pass | Error message presented |
+| | Non logged in user brute forcing the URL to get into profile section | Redirected to 404 page | Pass |  |
 | Register | | | | |
 | | Click Register button | Redirects user to register page | Pass |  |
 | | Left Email field empty | Required field prevents submit | Pass | |

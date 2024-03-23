@@ -7,6 +7,7 @@
 Brseaford24 - Partner - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
 
 rydy91@gmail - Friend - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
+
 ## Code Validation
 
 ### HTML
@@ -31,6 +32,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | templates | logout.html/allauth | ![screenshot](documentation/validation/w3c-signin.png) | |
 | templates | login.html/allauth | ![screenshot](documentation/validation/w3c-signout.png) | |
 | templates | 404.html | ![screenshot](documentation/validation/w3c-404.png) | |
+| templates | 500.html | ![screenshot](documentation/validation/w3c-500.png) | |
 | user_dashboard | profile.html | ![screenshot](documentation/validation/w3c-profile.png) | |
 | user_dashboard | profile_comments.html | ![screenshot](documentation/validation/w3c-profile-comments.png) | |
 | user_dashboard | profile_contact.html | ![screenshot](documentation/validation/w3c-profile-contact.png) | |
@@ -118,6 +120,7 @@ I've tested my deployed project using the Lighthouse Audit tool. Desktop scored 
 | Work Delete | ![screenshot](documentation/lighthouse/lighthouse-workdelete-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workdelete-desktop.png) | |
 | Work Edit | ![screenshot](documentation/lighthouse/lighthouse-workedit-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-workedit-desktop.png) | |
 | 404 | ![screenshot](documentation/lighthouse/lighthouse-404-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-404-desktop.png) | |
+| 500 | ![screenshot](documentation/lighthouse/lighthouse-500-mobile.png) | ![screenshot](documentation/lighthouse/lighthouse-500-desktop.png) | |
 
 ## Defensive Programming
 
@@ -166,6 +169,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Left Message field empty | Required field prevents submit | Pass | |
 | | Click Submit | Form sends off to admin | Pass | |
 | | Checked admin panel to see if received | Received | Pass | |
+| | Intentionally broke contact form in html | Redirected to 500 | Pass | |
 | Signin | | | | |
 | | Click on the Login link | Redirection to Login page | Pass | |
 | | Enter valid email address | Field will only accept email address format | Pass | |
@@ -234,6 +238,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | | Click Submit button | Redirects user to profile page | Pass | |
 | | Log into admin panel to view | Form is available to read | Pass | |
 | | Non logged in user brute forcing the URL to get into profile section | Redirected to 404 page | Pass |  |
+| | Intentionally broke contact form in html | Redirected to 500 | Pass | |
 | Register | | | | |
 | | Click Register button | Redirects user to register page | Pass |  |
 | | Left Email field empty | Required field prevents submit | Pass | |

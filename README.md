@@ -347,6 +347,16 @@ Contact Admin - allows user to send a message to admin if needed.
 
 </details>
 
+- **500 Page**
+
+    - Advises something went wrong with button that redirects home.
+
+<details>
+<summary> Click here to see the 500 view</summary> 
+
+  - ![screenshot](documentation/features/500.png)
+
+</details>
 
 ### Future Features
 

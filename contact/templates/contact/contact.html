@@ -7,7 +7,7 @@
 {% load crispy_forms_tags %}
 {% load cloudinary %}
 <div class="container">
-    <form method="POST" enctype="multipart/form-data" class="p-2 form">
+    <form method="POST" action="{% url 'contact' %}" class="p-2 form">
         <h1 class="text-center">Contact Admin</h1>
         <p class="page-intro p-2">
             Whether you have questions about our platform, want to provide feedback,

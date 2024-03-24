@@ -6,6 +6,8 @@
 ## Real users
 Brseaford24 - Partner - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
 
+pete - Partner's Father - Testing: Created a comment.
+
 rydy91@gmail - Friend - Testing: Created post, edited and deleted. Like and un-liked post. Created a comment, edit and delete.
 
 ## Code Validation

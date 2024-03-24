@@ -360,17 +360,19 @@ Contact Admin - allows user to send a message to admin if needed.
 
 ### Future Features
 
-- Search by Category
-    - Implement a search functionality that allows users to filter works by category. 
+- Filter by Category
+    - Implement filter functionality that allows users to filter works by category. 
     This feature enhances user experience by enabling them to find relevant content more efficiently 
 - Direct Messaging Service
     - Introduce a direct messaging service to facilitate communication between community members. 
     Users can reach out to each other for quotes or collaborations after viewing each other's work. 
-    This enhances networking and collaboration within the community.
+    This enhances networking and collaboration within the community. The user type field from the profile 
+    model would be used here 
 - Company and User Home Pages
     - Create dedicated home pages for companies and users to showcase their works and relevant information. 
     This feature provides a centralized platform for users to present their portfolio, 
-    allowing for greater visibility and engagement.
+    allowing for greater visibility and engagement. The user type field from the profile 
+    model would be used here 
 
 These future features aim to enhance user experience, foster collaboration
 and provide a comprehensive platform for showcasing and connecting with others within the community.
